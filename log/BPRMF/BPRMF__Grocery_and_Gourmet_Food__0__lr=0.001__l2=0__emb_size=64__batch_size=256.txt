@@ -1,0 +1,104 @@
+INFO:root:Namespace(model_name='BPRMF', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2025-12-18 18:09:39 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 200                 
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ l2                 | 0                   
+ lr                 | 0.001               
+ main_metric        |                     
+ num_neg            | 1                   
+ num_workers        | 0                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 1                   
+ topk               | [5, 10, 20, 50]     
+===========================================
+INFO:root:Device: cuda
+INFO:root:Reading data from "../data/", dataset = "Grocery_and_Gourmet_Food" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 14681, "# item": 8713, "# entry": 151254
+INFO:root:Save corpus to ../data/Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:BPRMF(
+  (u_embeddings): Embedding(14682, 64)
+  (i_embeddings): Embedding(8714, 64)
+)
+INFO:root:Test Before Training: (HR@5:0.0007,NDCG@5:0.0004,HR@10:0.0013,NDCG@10:0.0006,HR@20:0.0026,NDCG@20:0.0009,HR@50:0.0063,NDCG@50:0.0017)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.6780 [4.7 s]	val=(HR@5:0.0082,NDCG@5:0.0054) [1.8 s] *
+INFO:root:Epoch 2     loss=0.5331 [1.8 s]	val=(HR@5:0.0103,NDCG@5:0.0066) [1.6 s] *
+INFO:root:Epoch 3     loss=0.4532 [1.9 s]	val=(HR@5:0.0147,NDCG@5:0.0090) [1.5 s] *
+INFO:root:Epoch 4     loss=0.4034 [1.8 s]	val=(HR@5:0.0183,NDCG@5:0.0113) [1.5 s] *
+INFO:root:Epoch 5     loss=0.3594 [1.7 s]	val=(HR@5:0.0220,NDCG@5:0.0135) [1.5 s] *
+INFO:root:Epoch 6     loss=0.3168 [1.6 s]	val=(HR@5:0.0225,NDCG@5:0.0142) [1.4 s] *
+INFO:root:Epoch 7     loss=0.2766 [1.6 s]	val=(HR@5:0.0253,NDCG@5:0.0161) [1.5 s] *
+INFO:root:Epoch 8     loss=0.2414 [1.6 s]	val=(HR@5:0.0262,NDCG@5:0.0167) [1.5 s] *
+INFO:root:Epoch 9     loss=0.2081 [1.6 s]	val=(HR@5:0.0272,NDCG@5:0.0170) [1.4 s] *
+INFO:root:Epoch 10    loss=0.1809 [1.6 s]	val=(HR@5:0.0275,NDCG@5:0.0175) [1.5 s] *
+INFO:root:Epoch 11    loss=0.1558 [1.6 s]	val=(HR@5:0.0281,NDCG@5:0.0178) [1.4 s] *
+INFO:root:Epoch 12    loss=0.1339 [1.6 s]	val=(HR@5:0.0298,NDCG@5:0.0185) [1.5 s] *
+INFO:root:Epoch 13    loss=0.1164 [3.4 s]	val=(HR@5:0.0317,NDCG@5:0.0195) [2.0 s] *
+INFO:root:Epoch 14    loss=0.1014 [3.5 s]	val=(HR@5:0.0326,NDCG@5:0.0200) [2.1 s] *
+INFO:root:Epoch 15    loss=0.0868 [3.6 s]	val=(HR@5:0.0307,NDCG@5:0.0192) [2.2 s]
+INFO:root:Epoch 16    loss=0.0771 [3.5 s]	val=(HR@5:0.0312,NDCG@5:0.0197) [2.1 s]
+INFO:root:Epoch 17    loss=0.0676 [3.7 s]	val=(HR@5:0.0312,NDCG@5:0.0199) [2.2 s]
+INFO:root:Epoch 18    loss=0.0605 [3.8 s]	val=(HR@5:0.0311,NDCG@5:0.0196) [2.1 s]
+INFO:root:Epoch 19    loss=0.0538 [3.7 s]	val=(HR@5:0.0317,NDCG@5:0.0201) [2.1 s] *
+INFO:root:Epoch 20    loss=0.0475 [3.7 s]	val=(HR@5:0.0314,NDCG@5:0.0198) [2.0 s]
+INFO:root:Epoch 21    loss=0.0423 [3.5 s]	val=(HR@5:0.0322,NDCG@5:0.0207) [2.1 s] *
+INFO:root:Epoch 22    loss=0.0387 [3.6 s]	val=(HR@5:0.0314,NDCG@5:0.0198) [2.2 s]
+INFO:root:Epoch 23    loss=0.0352 [3.6 s]	val=(HR@5:0.0309,NDCG@5:0.0200) [1.6 s]
+INFO:root:Epoch 24    loss=0.0318 [1.6 s]	val=(HR@5:0.0304,NDCG@5:0.0198) [1.5 s]
+INFO:root:Epoch 25    loss=0.0294 [1.6 s]	val=(HR@5:0.0309,NDCG@5:0.0200) [1.5 s]
+INFO:root:Early stop manually
+INFO:root:
+--------------------------------------------- END: 2025-12-18 18:11:37 ---------------------------------------------
+INFO:root:Namespace(model_name='BPRMF', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2025-12-18 18:36:03 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ batch_size         | 256                 
+ data_appendix      |                     
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0                   
+ early_stop         | 10                  
+ emb_size           | 64                  
+ epoch              | 200                 
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ l2                 | 0                   
+ lr                 | 0.001               
+ main_metric        |                     
+ num_neg            | 1                   
+ num_workers        | 0                   
+ optimizer          | Adam                
+ random_seed        | 0                   
+ save_final_results | 1                   
+ test_all           | 1                   
+ topk               | [5, 10, 20, 50]     
+===========================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ../data/Grocery_and_Gourmet_Food\BaseReader.pkl
+INFO:root:#params: 1497344
+INFO:root:BPRMF(
+  (u_embeddings): Embedding(14682, 64)
+  (i_embeddings): Embedding(8714, 64)
+)
+INFO:root:Test Before Training: (HR@5:0.0007,NDCG@5:0.0004,HR@10:0.0013,NDCG@10:0.0006,HR@20:0.0026,NDCG@20:0.0009,HR@50:0.0063,NDCG@50:0.0017)
+INFO:root:Optimizer: Adam
+INFO:root:Early stop manually
+INFO:root:
+--------------------------------------------- END: 2025-12-18 18:36:22 ---------------------------------------------

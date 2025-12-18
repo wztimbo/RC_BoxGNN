@@ -223,7 +223,7 @@ class BoxGNN(BaseModel):
         self.node_dropout_rate = args.node_dropout_rate
         self.mess_dropout = args.mess_dropout
         self.mess_dropout_rate = args.mess_dropout_rate
-        self.device = torch.device("cpu")
+        self.device = torch.device(args.device)
 
         train_data=corpus.data_gnn['train']
         adj_cf_mat, norm_cf_mat, mean_cf_mat = corpus.build_interact_matrix(train_data, data_stat)

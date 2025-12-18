@@ -19,6 +19,7 @@
 # 使用conda创建虚拟环境
 
 conda create -n rc_boxgnn python=3.10.4
+conda activate rc_boxgnn
 ```
 ```bash
 # 下载与安装依赖
@@ -26,10 +27,14 @@ git clone https://github.com/wztimbo/RC_BoxGNN.git
 
 cd RC
 
-pip install -r requirements.txt
-
-# 安装torch_scatter,torch_sparse
+# CPU运行
+pip install -r requirements_cpu.txt
 pip install torch_scatter torch_sparse  -f https://data.pyg.org/whl/torch-2.1.0+cpu.html
+
+# GPU运行
+pip install -r requirements_gpu.txt
+pip install torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0 --index-url https://download.pytorch.org/whl/cu128
+pip install torch_scatter torch_sparse -f https://data.pyg.org/whl/torch-2.7.0+cu128.html
 ```
 ### 不同数据集下运行BoxGNN
 ```bash

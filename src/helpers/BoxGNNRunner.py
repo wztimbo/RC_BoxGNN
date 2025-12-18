@@ -25,7 +25,7 @@ class BoxGNNRunner(BaseRunner):
         parser.add_argument('--eval_batch_size', type=int, default=256, help='Batch size during testing.')
         parser.add_argument('--dropout', type=float, default=0.2,help='Dropout probability for each deep layer')
         parser.add_argument('--optimizer', type=str, default='Adam',help='optimizer: GD, Adam, Adagrad, Adadelta')
-        parser.add_argument('--topk', type=str, default=[5,10],help='The number of items recommended to each user.')
+        parser.add_argument('--topk', type=str, default=[10,20,50],help='The number of items recommended to each user.')
         parser.add_argument('--metric', type=str, default='["NDCG","HR"]',help='metrics: NDCG, HR')
         parser.add_argument("--data_path", nargs="?", default="data/", help="Input data path.")
         parser.add_argument("--model", default="boxgnn", help="choose in [boxgnn, lfgcf, lightgcn, ngcf, dspr, bpr]")
@@ -63,6 +63,7 @@ class BoxGNNRunner(BaseRunner):
         self.eval_rnd_neg=args.eval_rnd_neg
         self.batch_test_flag=args.batch_test_flag
         self.num_neg_sample=args.num_neg_sample
+        self.device=args.device
         super().__init__(args)
         
     def _build_optimizer(self,model):
@@ -85,7 +86,7 @@ class BoxGNNRunner(BaseRunner):
 
         model ,corpus= dic['train'].model, dic['train'].corpus
 
-        train_data = torch.LongTensor(corpus.data_gnn['train']).to('cpu')  #构建张量
+        train_data = torch.LongTensor(corpus.data_gnn['train']).to(self.device)  #构建张量
         train_dataset = corpus.TrainDataset(self,train_data , corpus.data_dict, corpus.data_stat)
         train_dataloader = DataLoader(train_dataset, shuffle=True, batch_size=self.batch_size)
         #在训练之前先调用一次，初始度量
@@ -275,7 +276,7 @@ class BoxGNNRunner(BaseRunner):
             end = (u_batch_id + 1) * u_batch_size
 
             user_list_batch = test_users[start: end]
-            user_batch = torch.LongTensor(np.array(user_list_batch)).to('cpu')
+            user_batch = torch.LongTensor(np.array(user_list_batch)).to(self.device)
             u_g_embeddings = user_gcn_emb[user_batch]
 
             if self.eval_rnd_neg:
@@ -283,11 +284,11 @@ class BoxGNNRunner(BaseRunner):
                 ### randomly select 100 negative samples 
                 negatives = dataset.negative_sampling(user_batch, 100)
 
-                neg_items = torch.LongTensor(negatives).to('cpu')
+                neg_items = torch.LongTensor(negatives).to(self.device)
                 pos_items = []
                 for u in user_list_batch:
                     pos_items.append(test_user_set[u])
-                pos_items = torch.LongTensor(pos_items).to('cpu')
+                pos_items = torch.LongTensor(pos_items).to(self.device)
 
                 ### 100个负样本，正样本放在第一个。
                 all_items = torch.cat([pos_items, neg_items], dim=-1)
@@ -296,7 +297,7 @@ class BoxGNNRunner(BaseRunner):
                 rate_batch = model.rating(u_g_embeddings, i_g_embddings, same_dim=True).detach()
             else:
                 ### evaluate performance among all items
-                all_items = torch.LongTensor(np.array(range(0, n_items))).to('cpu')
+                all_items = torch.LongTensor(np.array(range(0, n_items))).to(self.device)
                 if self.batch_test_flag:
                     # batch-item test
                     n_item_batchs = n_items // i_batch_size + 1
@@ -307,7 +308,7 @@ class BoxGNNRunner(BaseRunner):
                         i_start = i_batch_id * i_batch_size
                         i_end = min((i_batch_id + 1) * i_batch_size, n_items)
 
-                        item_batch = torch.LongTensor(np.array(range(i_start, i_end))).view(i_end-i_start).to('cpu')
+                        item_batch = torch.LongTensor(np.array(range(i_start, i_end))).view(i_end-i_start).to(self.device)
                         i_g_embddings = entity_gcn_emb[item_batch]
 
                         i_rate_batch = model.rating(u_g_embeddings, i_g_embddings).detach()
