@@ -12,9 +12,7 @@
 ## 环境与配置
 
 - python 3.10.4
-- torch 2.1.0
-- torch-scatter 2.1.2+pt21cpu
-- torch-sparse 0.6.18+pt21cpu
+
 ```bash
 # 使用conda创建虚拟环境
 
