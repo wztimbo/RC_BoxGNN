@@ -21,7 +21,9 @@
 conda create -n rc_boxgnn python=3.10.4
 ```
 ```bash
-# 安装依赖
+# 下载与安装依赖
+git clone https://github.com/wztimbo/RC_BoxGNN.git
+
 cd RC
 
 pip install -r requirements.txt
@@ -32,15 +34,15 @@ pip install torch_scatter torch_sparse  -f https://data.pyg.org/whl/torch-2.1.0+
 ### 不同数据集下运行BoxGNN
 ```bash
 cd src
-python main.py --model BoxGNN --dataset Grocery_and_Gourmet_Food --beta 0.3
+python main.py --model_name BoxGNN --dataset Grocery_and_Gourmet_Food --beta 0.3
 ```
 ```bash
-python main.py --model BoxGNN --dataset MovieLens --beta 0.2
+python main.py --model_name BoxGNN --dataset MovieLens --beta 0.2
 ```
 ```bash
-python main.py --model BoxGNN --dataset lastfm --beta 0.3
+python main.py --model_name BoxGNN --dataset lastfm --beta 0.3
 ```
 ### 其它模型
 ```bash
-python main.py --model LightGCN --dataset Grocery_and_Gourmet_Food 
+python main.py --model_name LightGCN --dataset Grocery_and_Gourmet_Food 
 ```
