@@ -23,7 +23,7 @@ conda activate rc_boxgnn
 # 下载与安装依赖
 git clone https://github.com/wztimbo/RC_BoxGNN.git
 
-cd RC
+cd RC_BoxGNN
 
 # CPU运行
 pip install -r requirements_cpu.txt
