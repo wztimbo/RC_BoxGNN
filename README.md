@@ -5,7 +5,7 @@
 本项目在 ReChorus 推荐系统框架上实现 BoxGNN，
 用于探索图结构表示学习在推荐系统中的应用。
 
-项目添加了BoxGNN.py文件、BoxGNNReader.py、BoxGNNRunner.py文件
+项目主要添加了BoxGNN.py文件、BoxGNNReader.py、BoxGNNRunner.py文件
 
 该代码主要用于课程实验与科研复现。
 
