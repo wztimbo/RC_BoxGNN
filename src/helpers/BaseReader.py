@@ -13,7 +13,7 @@ from utils import utils
 class BaseReader(object):
     @staticmethod
     def parse_data_args(parser):
-        parser.add_argument('--path', type=str, default='data/',
+        parser.add_argument('--path', type=str, default='../data/',
                             help='Input data dir.')
         parser.add_argument('--dataset', type=str, default='Grocery_and_Gourmet_Food',
                             help='Choose a dataset.')
@@ -25,20 +25,9 @@ class BaseReader(object):
         self.sep = args.sep
         self.prefix = args.path
         self.dataset = args.dataset
+        print('BaseReader__init__......')
         self._read_data()
 
-        self.train_clicked_set = dict()  # store the clicked item set of each user in training set
-        self.residual_clicked_set = dict()  # store the residual clicked item set of each user
-        for key in ['train', 'dev', 'test']:
-            df = self.data_df[key]
-            for uid, iid in zip(df['user_id'], df['item_id']):
-                if uid not in self.train_clicked_set:
-                    self.train_clicked_set[uid] = set()
-                    self.residual_clicked_set[uid] = set()
-                if key == 'train':
-                    self.train_clicked_set[uid].add(iid)
-                else:
-                    self.residual_clicked_set[uid].add(iid)
 
     def _read_data(self):
         logging.info('Reading data from \"{}\", dataset = \"{}\" '.format(self.prefix, self.dataset))
@@ -63,4 +52,17 @@ class BaseReader(object):
             positive_num = (self.all_df.label==1).sum()
             logging.info('"# positive interaction": {} ({:.1f}%)'.format(
 				positive_num, positive_num/self.all_df.shape[0]*100))
-        
+            
+        self.train_clicked_set = dict()  # store the clicked item set of each user in training set
+        self.residual_clicked_set = dict()  # store the residual clicked item set of each user
+        for key in ['train', 'dev', 'test']:
+            df = self.data_df[key]
+            for uid, iid in zip(df['user_id'], df['item_id']):
+                if uid not in self.train_clicked_set:
+                    self.train_clicked_set[uid] = set()
+                    self.residual_clicked_set[uid] = set()
+                if key == 'train':
+                    self.train_clicked_set[uid].add(iid)
+                else:
+                    self.residual_clicked_set[uid].add(iid)
+        print('data_df:',self.data_df)

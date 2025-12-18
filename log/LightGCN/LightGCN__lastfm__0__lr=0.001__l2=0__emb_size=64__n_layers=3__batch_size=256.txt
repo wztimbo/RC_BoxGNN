@@ -1,0 +1,318 @@
+INFO:root:Namespace(model_name='LightGCN', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2025-12-14 22:59:52 ---------------------------------------------
+INFO:root:
+======================================
+ Arguments          | Values          
+======================================
+ batch_size         | 256            
+ data_appendix      |                
+ dataset            | lastfm         
+ dropout            | 0              
+ early_stop         | 10             
+ emb_size           | 64             
+ epoch              | 200            
+ eval_batch_size    | 256            
+ gpu                | 0              
+ l2                 | 0              
+ lr                 | 0.001          
+ main_metric        |                
+ n_layers           | 3              
+ num_neg            | 1              
+ num_workers        | 5              
+ optimizer          | Adam           
+ random_seed        | 0              
+ save_final_results | 1              
+ test_all           | 1              
+ topk               | [5, 10, 20, 50]
+======================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ../data/lastfm\BaseReader.pkl
+INFO:root:Namespace(model_name='LightGCN', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2025-12-14 23:02:38 ---------------------------------------------
+INFO:root:
+======================================
+ Arguments          | Values          
+======================================
+ batch_size         | 256            
+ data_appendix      |                
+ dataset            | lastfm         
+ dropout            | 0              
+ early_stop         | 10             
+ emb_size           | 64             
+ epoch              | 200            
+ eval_batch_size    | 256            
+ gpu                | 0              
+ l2                 | 0              
+ lr                 | 0.001          
+ main_metric        |                
+ n_layers           | 3              
+ num_neg            | 1              
+ num_workers        | 5              
+ optimizer          | Adam           
+ random_seed        | 0              
+ save_final_results | 1              
+ test_all           | 1              
+ topk               | [5, 10, 20, 50]
+======================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ../data/lastfm\BaseReader.pkl
+INFO:root:#params: 1249664
+INFO:root:LightGCN(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 17633x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 1893x64]
+    )
+  )
+)
+INFO:root:Namespace(model_name='LightGCN', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2025-12-15 12:22:36 ---------------------------------------------
+INFO:root:
+======================================
+ Arguments          | Values          
+======================================
+ batch_size         | 256            
+ data_appendix      |                
+ dataset            | lastfm         
+ dropout            | 0              
+ early_stop         | 10             
+ emb_size           | 64             
+ epoch              | 200            
+ eval_batch_size    | 256            
+ gpu                | 0              
+ l2                 | 0              
+ lr                 | 0.001          
+ main_metric        |                
+ n_layers           | 3              
+ num_neg            | 1              
+ num_workers        | 5              
+ optimizer          | Adam           
+ random_seed        | 0              
+ save_final_results | 1              
+ test_all           | 1              
+ topk               | [5, 10, 20, 50]
+======================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ../data/lastfm\BaseReader.pkl
+INFO:root:#params: 1249664
+INFO:root:LightGCN(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 17633x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 1893x64]
+    )
+  )
+)
+INFO:root:Namespace(model_name='LightGCN', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2025-12-15 15:47:07 ---------------------------------------------
+INFO:root:
+======================================
+ Arguments          | Values          
+======================================
+ batch_size         | 256            
+ data_appendix      |                
+ dataset            | lastfm         
+ dropout            | 0              
+ early_stop         | 10             
+ emb_size           | 64             
+ epoch              | 200            
+ eval_batch_size    | 256            
+ gpu                | 0              
+ l2                 | 0              
+ lr                 | 0.001          
+ main_metric        |                
+ n_layers           | 3              
+ num_neg            | 1              
+ num_workers        | 5              
+ optimizer          | Adam           
+ random_seed        | 0              
+ save_final_results | 1              
+ test_all           | 1              
+ topk               | [5, 10, 20, 50]
+======================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ../data/lastfm\BaseReader.pkl
+INFO:root:#params: 1249664
+INFO:root:LightGCN(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 17633x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 1893x64]
+    )
+  )
+)
+INFO:root:Namespace(model_name='LightGCN', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2025-12-15 15:52:05 ---------------------------------------------
+INFO:root:
+======================================
+ Arguments          | Values          
+======================================
+ batch_size         | 256            
+ data_appendix      |                
+ dataset            | lastfm         
+ dropout            | 0              
+ early_stop         | 10             
+ emb_size           | 64             
+ epoch              | 200            
+ eval_batch_size    | 256            
+ gpu                | 0              
+ l2                 | 0              
+ lr                 | 0.001          
+ main_metric        |                
+ n_layers           | 3              
+ num_neg            | 1              
+ num_workers        | 0              
+ optimizer          | Adam           
+ random_seed        | 0              
+ save_final_results | 1              
+ test_all           | 1              
+ topk               | [5, 10, 20, 50]
+======================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ../data/lastfm\BaseReader.pkl
+INFO:root:#params: 1249664
+INFO:root:LightGCN(
+  (encoder): LGCNEncoder(
+    (embedding_dict): ParameterDict(
+        (item_emb): Parameter containing: [torch.FloatTensor of size 17633x64]
+        (user_emb): Parameter containing: [torch.FloatTensor of size 1893x64]
+    )
+  )
+)
+INFO:root:Test Before Training: (HR@5:0.0000,NDCG@5:0.0000,HR@10:0.0005,NDCG@10:0.0002,HR@20:0.0016,NDCG@20:0.0004,HR@50:0.0037,NDCG@50:0.0008)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.4336 [30.0 s]	val=(HR@5:0.1540,NDCG@5:0.1164) [3.2 s] *
+INFO:root:Epoch 2     loss=0.2646 [25.6 s]	val=(HR@5:0.1673,NDCG@5:0.1278) [3.2 s] *
+INFO:root:Epoch 3     loss=0.2315 [25.4 s]	val=(HR@5:0.1816,NDCG@5:0.1415) [2.6 s] *
+INFO:root:Epoch 4     loss=0.2058 [26.1 s]	val=(HR@5:0.1997,NDCG@5:0.1534) [3.0 s] *
+INFO:root:Epoch 5     loss=0.1841 [27.3 s]	val=(HR@5:0.2114,NDCG@5:0.1596) [3.2 s] *
+INFO:root:Epoch 6     loss=0.1662 [26.7 s]	val=(HR@5:0.2183,NDCG@5:0.1638) [2.9 s] *
+INFO:root:Epoch 7     loss=0.1508 [25.9 s]	val=(HR@5:0.2236,NDCG@5:0.1675) [2.7 s] *
+INFO:root:Epoch 8     loss=0.1352 [26.3 s]	val=(HR@5:0.2315,NDCG@5:0.1759) [2.9 s] *
+INFO:root:Epoch 9     loss=0.1244 [27.3 s]	val=(HR@5:0.2390,NDCG@5:0.1810) [3.6 s] *
+INFO:root:Epoch 10    loss=0.1168 [26.4 s]	val=(HR@5:0.2496,NDCG@5:0.1870) [2.8 s] *
+INFO:root:Epoch 11    loss=0.1082 [26.0 s]	val=(HR@5:0.2549,NDCG@5:0.1913) [4.0 s] *
+INFO:root:Epoch 12    loss=0.0987 [50.1 s]	val=(HR@5:0.2586,NDCG@5:0.1955) [3.7 s] *
+INFO:root:Epoch 13    loss=0.0939 [52.8 s]	val=(HR@5:0.2666,NDCG@5:0.2006) [3.6 s] *
+INFO:root:Epoch 14    loss=0.0868 [53.1 s]	val=(HR@5:0.2735,NDCG@5:0.2053) [3.7 s] *
+INFO:root:Epoch 15    loss=0.0815 [57.7 s]	val=(HR@5:0.2783,NDCG@5:0.2092) [3.6 s] *
+INFO:root:Epoch 16    loss=0.0775 [54.2 s]	val=(HR@5:0.2841,NDCG@5:0.2141) [3.9 s] *
+INFO:root:Epoch 17    loss=0.0724 [48.6 s]	val=(HR@5:0.2831,NDCG@5:0.2157) [3.6 s] *
+INFO:root:Epoch 18    loss=0.0680 [50.2 s]	val=(HR@5:0.2910,NDCG@5:0.2197) [3.7 s] *
+INFO:root:Epoch 19    loss=0.0668 [46.2 s]	val=(HR@5:0.2900,NDCG@5:0.2220) [3.5 s] *
+INFO:root:Epoch 20    loss=0.0619 [42.3 s]	val=(HR@5:0.2937,NDCG@5:0.2264) [3.5 s] *
+INFO:root:Epoch 21    loss=0.0603 [42.5 s]	val=(HR@5:0.2985,NDCG@5:0.2283) [3.6 s] *
+INFO:root:Epoch 22    loss=0.0558 [43.6 s]	val=(HR@5:0.3006,NDCG@5:0.2309) [3.7 s] *
+INFO:root:Epoch 23    loss=0.0566 [42.8 s]	val=(HR@5:0.3027,NDCG@5:0.2332) [3.6 s] *
+INFO:root:Epoch 24    loss=0.0518 [41.9 s]	val=(HR@5:0.3054,NDCG@5:0.2352) [3.6 s] *
+INFO:root:Epoch 25    loss=0.0504 [42.3 s]	val=(HR@5:0.3075,NDCG@5:0.2375) [3.7 s] *
+INFO:root:Epoch 26    loss=0.0492 [41.1 s]	val=(HR@5:0.3112,NDCG@5:0.2403) [5.0 s] *
+INFO:root:Epoch 27    loss=0.0469 [48.5 s]	val=(HR@5:0.3117,NDCG@5:0.2425) [4.6 s] *
+INFO:root:Epoch 28    loss=0.0431 [49.1 s]	val=(HR@5:0.3144,NDCG@5:0.2441) [4.1 s] *
+INFO:root:Epoch 29    loss=0.0436 [42.2 s]	val=(HR@5:0.3170,NDCG@5:0.2478) [4.1 s] *
+INFO:root:Epoch 30    loss=0.0412 [29.7 s]	val=(HR@5:0.3160,NDCG@5:0.2487) [3.3 s] *
+INFO:root:Epoch 31    loss=0.0400 [29.5 s]	val=(HR@5:0.3192,NDCG@5:0.2500) [4.2 s] *
+INFO:root:Epoch 32    loss=0.0387 [41.5 s]	val=(HR@5:0.3224,NDCG@5:0.2515) [3.6 s] *
+INFO:root:Epoch 33    loss=0.0371 [37.1 s]	val=(HR@5:0.3240,NDCG@5:0.2541) [4.3 s] *
+INFO:root:Epoch 34    loss=0.0354 [33.3 s]	val=(HR@5:0.3255,NDCG@5:0.2552) [5.9 s] *
+INFO:root:Epoch 35    loss=0.0359 [52.6 s]	val=(HR@5:0.3282,NDCG@5:0.2579) [4.6 s] *
+INFO:root:Epoch 36    loss=0.0340 [54.2 s]	val=(HR@5:0.3298,NDCG@5:0.2579) [3.8 s] *
+INFO:root:Epoch 37    loss=0.0327 [46.4 s]	val=(HR@5:0.3303,NDCG@5:0.2599) [4.1 s] *
+INFO:root:Epoch 38    loss=0.0321 [50.2 s]	val=(HR@5:0.3335,NDCG@5:0.2631) [4.2 s] *
+INFO:root:Epoch 39    loss=0.0317 [50.5 s]	val=(HR@5:0.3330,NDCG@5:0.2631) [4.2 s] *
+INFO:root:Epoch 40    loss=0.0304 [46.8 s]	val=(HR@5:0.3351,NDCG@5:0.2647) [4.2 s] *
+INFO:root:Epoch 41    loss=0.0296 [37.2 s]	val=(HR@5:0.3367,NDCG@5:0.2667) [3.8 s] *
+INFO:root:Epoch 42    loss=0.0296 [53.1 s]	val=(HR@5:0.3399,NDCG@5:0.2676) [3.8 s] *
+INFO:root:Epoch 43    loss=0.0290 [52.2 s]	val=(HR@5:0.3409,NDCG@5:0.2686) [3.6 s] *
+INFO:root:Epoch 44    loss=0.0280 [48.9 s]	val=(HR@5:0.3383,NDCG@5:0.2689) [3.8 s] *
+INFO:root:Epoch 45    loss=0.0256 [50.0 s]	val=(HR@5:0.3457,NDCG@5:0.2721) [3.8 s] *
+INFO:root:Epoch 46    loss=0.0259 [50.5 s]	val=(HR@5:0.3463,NDCG@5:0.2733) [3.8 s] *
+INFO:root:Epoch 47    loss=0.0248 [47.0 s]	val=(HR@5:0.3436,NDCG@5:0.2727) [3.8 s]
+INFO:root:Epoch 48    loss=0.0242 [48.5 s]	val=(HR@5:0.3468,NDCG@5:0.2750) [3.9 s] *
+INFO:root:Epoch 49    loss=0.0228 [47.0 s]	val=(HR@5:0.3463,NDCG@5:0.2755) [2.9 s] *
+INFO:root:Epoch 50    loss=0.0246 [42.6 s]	val=(HR@5:0.3473,NDCG@5:0.2751) [4.3 s]
+INFO:root:Epoch 51    loss=0.0231 [48.7 s]	val=(HR@5:0.3468,NDCG@5:0.2757) [3.7 s] *
+INFO:root:Epoch 52    loss=0.0227 [49.5 s]	val=(HR@5:0.3500,NDCG@5:0.2776) [3.8 s] *
+INFO:root:Epoch 53    loss=0.0226 [54.5 s]	val=(HR@5:0.3516,NDCG@5:0.2784) [2.9 s] *
+INFO:root:Epoch 54    loss=0.0232 [33.6 s]	val=(HR@5:0.3537,NDCG@5:0.2800) [3.8 s] *
+INFO:root:Epoch 55    loss=0.0215 [50.8 s]	val=(HR@5:0.3563,NDCG@5:0.2825) [3.6 s] *
+INFO:root:Epoch 56    loss=0.0216 [54.8 s]	val=(HR@5:0.3563,NDCG@5:0.2832) [3.7 s] *
+INFO:root:Epoch 57    loss=0.0207 [48.5 s]	val=(HR@5:0.3579,NDCG@5:0.2839) [3.7 s] *
+INFO:root:Epoch 58    loss=0.0194 [48.5 s]	val=(HR@5:0.3579,NDCG@5:0.2838) [3.8 s]
+INFO:root:Epoch 59    loss=0.0200 [50.3 s]	val=(HR@5:0.3595,NDCG@5:0.2853) [3.6 s] *
+INFO:root:Epoch 60    loss=0.0186 [55.9 s]	val=(HR@5:0.3622,NDCG@5:0.2868) [3.5 s] *
+INFO:root:Epoch 61    loss=0.0184 [50.4 s]	val=(HR@5:0.3611,NDCG@5:0.2861) [3.7 s]
+INFO:root:Epoch 62    loss=0.0190 [53.5 s]	val=(HR@5:0.3617,NDCG@5:0.2869) [3.8 s] *
+INFO:root:Epoch 63    loss=0.0175 [52.2 s]	val=(HR@5:0.3611,NDCG@5:0.2879) [3.7 s] *
+INFO:root:Epoch 64    loss=0.0189 [54.9 s]	val=(HR@5:0.3601,NDCG@5:0.2880) [3.8 s] *
+INFO:root:Epoch 65    loss=0.0180 [52.5 s]	val=(HR@5:0.3627,NDCG@5:0.2886) [3.8 s] *
+INFO:root:Epoch 66    loss=0.0176 [51.5 s]	val=(HR@5:0.3595,NDCG@5:0.2882) [3.6 s]
+INFO:root:Epoch 67    loss=0.0172 [52.7 s]	val=(HR@5:0.3633,NDCG@5:0.2898) [3.7 s] *
+INFO:root:Epoch 68    loss=0.0173 [50.6 s]	val=(HR@5:0.3680,NDCG@5:0.2914) [3.8 s] *
+INFO:root:Epoch 69    loss=0.0159 [51.1 s]	val=(HR@5:0.3659,NDCG@5:0.2911) [3.8 s]
+INFO:root:Epoch 70    loss=0.0169 [48.8 s]	val=(HR@5:0.3680,NDCG@5:0.2909) [3.9 s]
+INFO:root:Epoch 71    loss=0.0165 [50.2 s]	val=(HR@5:0.3648,NDCG@5:0.2916) [3.6 s] *
+INFO:root:Epoch 72    loss=0.0160 [53.3 s]	val=(HR@5:0.3664,NDCG@5:0.2902) [3.7 s]
+INFO:root:Epoch 73    loss=0.0165 [52.7 s]	val=(HR@5:0.3664,NDCG@5:0.2902) [3.7 s]
+INFO:root:Epoch 74    loss=0.0152 [42.1 s]	val=(HR@5:0.3675,NDCG@5:0.2924) [3.9 s] *
+INFO:root:Epoch 75    loss=0.0149 [42.8 s]	val=(HR@5:0.3707,NDCG@5:0.2928) [3.8 s] *
+INFO:root:Epoch 76    loss=0.0149 [53.2 s]	val=(HR@5:0.3691,NDCG@5:0.2925) [3.7 s]
+INFO:root:Epoch 77    loss=0.0141 [50.8 s]	val=(HR@5:0.3723,NDCG@5:0.2942) [3.7 s] *
+INFO:root:Epoch 78    loss=0.0140 [50.3 s]	val=(HR@5:0.3739,NDCG@5:0.2954) [3.5 s] *
+INFO:root:Epoch 79    loss=0.0132 [51.2 s]	val=(HR@5:0.3717,NDCG@5:0.2942) [4.3 s]
+INFO:root:Epoch 80    loss=0.0141 [54.5 s]	val=(HR@5:0.3728,NDCG@5:0.2944) [3.7 s]
+INFO:root:Epoch 81    loss=0.0140 [54.5 s]	val=(HR@5:0.3733,NDCG@5:0.2947) [3.6 s]
+INFO:root:Epoch 82    loss=0.0126 [49.1 s]	val=(HR@5:0.3765,NDCG@5:0.2954) [4.0 s] *
+INFO:root:Epoch 83    loss=0.0132 [54.7 s]	val=(HR@5:0.3760,NDCG@5:0.2949) [3.7 s]
+INFO:root:Epoch 84    loss=0.0134 [54.8 s]	val=(HR@5:0.3755,NDCG@5:0.2957) [4.0 s] *
+INFO:root:Epoch 85    loss=0.0124 [48.6 s]	val=(HR@5:0.3776,NDCG@5:0.2958) [4.0 s] *
+INFO:root:Epoch 86    loss=0.0127 [50.5 s]	val=(HR@5:0.3755,NDCG@5:0.2943) [3.8 s]
+INFO:root:Epoch 87    loss=0.0130 [52.2 s]	val=(HR@5:0.3781,NDCG@5:0.2944) [3.8 s]
+INFO:root:Epoch 88    loss=0.0117 [50.4 s]	val=(HR@5:0.3787,NDCG@5:0.2955) [4.7 s]
+INFO:root:Epoch 89    loss=0.0116 [49.7 s]	val=(HR@5:0.3771,NDCG@5:0.2957) [3.6 s]
+INFO:root:Epoch 90    loss=0.0119 [51.1 s]	val=(HR@5:0.3744,NDCG@5:0.2929) [3.8 s]
+INFO:root:Epoch 91    loss=0.0119 [51.8 s]	val=(HR@5:0.3781,NDCG@5:0.2951) [3.7 s]
+INFO:root:Epoch 92    loss=0.0114 [53.2 s]	val=(HR@5:0.3808,NDCG@5:0.2972) [3.9 s] *
+INFO:root:Epoch 93    loss=0.0121 [50.0 s]	val=(HR@5:0.3813,NDCG@5:0.2967) [3.9 s]
+INFO:root:Epoch 94    loss=0.0114 [47.8 s]	val=(HR@5:0.3829,NDCG@5:0.2982) [4.3 s] *
+INFO:root:Epoch 95    loss=0.0110 [49.8 s]	val=(HR@5:0.3808,NDCG@5:0.2959) [4.0 s]
+INFO:root:Epoch 96    loss=0.0111 [50.1 s]	val=(HR@5:0.3818,NDCG@5:0.2974) [3.3 s]
+INFO:root:Epoch 97    loss=0.0110 [51.4 s]	val=(HR@5:0.3824,NDCG@5:0.2989) [3.8 s] *
+INFO:root:Epoch 98    loss=0.0109 [49.1 s]	val=(HR@5:0.3824,NDCG@5:0.2981) [4.0 s]
+INFO:root:Epoch 99    loss=0.0107 [55.1 s]	val=(HR@5:0.3845,NDCG@5:0.2984) [3.8 s]
+INFO:root:Epoch 100   loss=0.0107 [52.0 s]	val=(HR@5:0.3829,NDCG@5:0.2979) [3.8 s]
+INFO:root:Epoch 101   loss=0.0100 [50.3 s]	val=(HR@5:0.3861,NDCG@5:0.2989) [3.7 s]
+INFO:root:Epoch 102   loss=0.0099 [51.0 s]	val=(HR@5:0.3861,NDCG@5:0.2990) [4.0 s] *
+INFO:root:Epoch 103   loss=0.0103 [52.3 s]	val=(HR@5:0.3845,NDCG@5:0.2973) [3.8 s]
+INFO:root:Epoch 104   loss=0.0104 [52.9 s]	val=(HR@5:0.3871,NDCG@5:0.2995) [3.8 s] *
+INFO:root:Epoch 105   loss=0.0102 [51.3 s]	val=(HR@5:0.3861,NDCG@5:0.2987) [3.7 s]
+INFO:root:Epoch 106   loss=0.0093 [52.1 s]	val=(HR@5:0.3850,NDCG@5:0.2981) [3.7 s]
+INFO:root:Epoch 107   loss=0.0097 [53.5 s]	val=(HR@5:0.3845,NDCG@5:0.2990) [3.7 s]
+INFO:root:Epoch 108   loss=0.0096 [55.5 s]	val=(HR@5:0.3861,NDCG@5:0.2987) [3.7 s]
+INFO:root:Epoch 109   loss=0.0096 [51.0 s]	val=(HR@5:0.3882,NDCG@5:0.3002) [3.8 s] *
+INFO:root:Epoch 110   loss=0.0092 [49.7 s]	val=(HR@5:0.3898,NDCG@5:0.3026) [3.8 s] *
+INFO:root:Epoch 111   loss=0.0094 [49.5 s]	val=(HR@5:0.3861,NDCG@5:0.3009) [3.8 s]
+INFO:root:Epoch 112   loss=0.0092 [45.7 s]	val=(HR@5:0.3909,NDCG@5:0.3035) [4.3 s] *
+INFO:root:Epoch 113   loss=0.0089 [29.2 s]	val=(HR@5:0.3909,NDCG@5:0.3022) [3.1 s]
+INFO:root:Epoch 114   loss=0.0091 [45.2 s]	val=(HR@5:0.3882,NDCG@5:0.3008) [3.7 s]
+INFO:root:Epoch 115   loss=0.0090 [54.3 s]	val=(HR@5:0.3903,NDCG@5:0.3021) [3.7 s]
+INFO:root:Epoch 116   loss=0.0080 [30.2 s]	val=(HR@5:0.3871,NDCG@5:0.3013) [3.8 s]
+INFO:root:Epoch 117   loss=0.0087 [41.4 s]	val=(HR@5:0.3856,NDCG@5:0.3006) [3.6 s]
+INFO:root:Epoch 118   loss=0.0094 [51.6 s]	val=(HR@5:0.3909,NDCG@5:0.3020) [3.8 s]
+INFO:root:Epoch 119   loss=0.0083 [52.1 s]	val=(HR@5:0.3909,NDCG@5:0.3025) [3.8 s]
+INFO:root:Epoch 120   loss=0.0083 [52.7 s]	val=(HR@5:0.3893,NDCG@5:0.3012) [2.9 s]
+INFO:root:Epoch 121   loss=0.0084 [43.6 s]	val=(HR@5:0.3903,NDCG@5:0.3009) [4.0 s]
+INFO:root:Early stop at 121 based on val result.
+INFO:root:
+Best Iter(val)=  112	 val=(HR@5:0.3909,NDCG@5:0.3035) [6101.0 s] 
+INFO:root:Load model from ../model/LightGCN/LightGCN__lastfm__0__lr=0.001__l2=0__emb_size=64__n_layers=3__batch_size=256.pt
+INFO:root:
+Val  After Training: (HR@5:0.3909,NDCG@5:0.3035,HR@10:0.4684,NDCG@10:0.3285,HR@20:0.5597,NDCG@20:0.3516,HR@50:0.6718,NDCG@50:0.3740)
+INFO:root:
+Test After Training: (HR@5:0.4628,NDCG@5:0.3653,HR@10:0.5451,NDCG@10:0.3918,HR@20:0.6269,NDCG@20:0.4124,HR@50:0.7261,NDCG@50:0.4321)
+INFO:root:Saving top-100 recommendation results to: ../log/LightGCN\LightGCN__lastfm__0__lr=0\rec-LightGCN-dev.csv
+INFO:root:dev Prediction results saved!
+INFO:root:Saving top-100 recommendation results to: ../log/LightGCN\LightGCN__lastfm__0__lr=0\rec-LightGCN-test.csv
+INFO:root:test Prediction results saved!
+INFO:root:
+--------------------------------------------- END: 2025-12-15 17:34:47 ---------------------------------------------

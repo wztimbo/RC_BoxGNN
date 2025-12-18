@@ -1,0 +1,134 @@
+INFO:root:Namespace(model_name='BoxGNN', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2025-12-16 09:36:02 ---------------------------------------------
+INFO:root:
+====================================
+ Arguments           | Values       
+====================================
+ Ks                  | [10, 20, 50]
+ batch_size          | 1024        
+ batch_test_flag     | True        
+ beta                | 0.2         
+ context_hops        | 3           
+ cuda                | True        
+ data_appendix       |             
+ data_path           | data/       
+ dataset             | MovieLens   
+ dim                 | 64          
+ dropout             | 0.2         
+ early_stop          | 1           
+ epoch               | 2000        
+ eval_batch_size     | 256         
+ eval_rnd_neg        | False       
+ eval_step           | 5           
+ gpu                 | 0           
+ gpu_id              | 0           
+ graph_type          | all         
+ inverse_r           | True        
+ l2                  | 0           
+ logit_cal           | box         
+ lr                  | 0.001       
+ main_metric         |             
+ mess_dropout        | True        
+ mess_dropout_rate   | 0.1         
+ model               | boxgnn      
+ node_dropout        | True        
+ node_dropout_rate   | 0.5         
+ num_neg_sample      | 1           
+ num_workers         | 5           
+ optimizer           | Adam        
+ out_dir             | ./weights/  
+ pretrain_model_path |             
+ random_seed         | 0           
+ save                | False       
+ save_final_results  | 1           
+ tau                 | 1.0         
+ test_all            | 1           
+ test_batch_size     | 1024        
+ test_flag           | part        
+ topk                | [5, 10]     
+====================================
+INFO:root:Device: cpu
+INFO:root:*******BOXGNN Reading data from "../data/", dataset = "MovieLens" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 6031, "# item": 3124, "# entry": 574197
+INFO:root:*******BOXGNN Reading data from "../data/", dataset = "MovieLens" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 6031, "# item": 3124, "# entry": 574197
+INFO:root:Save corpus to ../data/MovieLens\BoxGNNReader.pkl
+INFO:root:#params: 1186816
+INFO:root:BoxGNN(
+  (gcn): GraphConv(
+    (center_net): CenterIntersection(
+      (layer1): Linear(in_features=64, out_features=64, bias=True)
+      (layer2): Linear(in_features=64, out_features=64, bias=True)
+    )
+    (offset_net): BoxOffsetIntersection()
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+INFO:root:Test Before Training: pass
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='BoxGNN', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2025-12-16 10:08:41 ---------------------------------------------
+INFO:root:
+====================================
+ Arguments           | Values       
+====================================
+ Ks                  | [10, 20, 50]
+ batch_size          | 1024        
+ batch_test_flag     | True        
+ beta                | 0.2         
+ context_hops        | 3           
+ cuda                | True        
+ data_appendix       |             
+ data_path           | data/       
+ dataset             | MovieLens   
+ dim                 | 64          
+ dropout             | 0.2         
+ early_stop          | 1           
+ epoch               | 2000        
+ eval_batch_size     | 256         
+ eval_rnd_neg        | False       
+ eval_step           | 5           
+ gpu                 | 0           
+ gpu_id              | 0           
+ graph_type          | all         
+ inverse_r           | True        
+ l2                  | 0           
+ logit_cal           | box         
+ lr                  | 0.001       
+ main_metric         |             
+ mess_dropout        | True        
+ mess_dropout_rate   | 0.1         
+ model               | boxgnn      
+ node_dropout        | True        
+ node_dropout_rate   | 0.5         
+ num_neg_sample      | 1           
+ num_workers         | 5           
+ optimizer           | Adam        
+ out_dir             | ./weights/  
+ pretrain_model_path |             
+ random_seed         | 0           
+ save                | False       
+ save_final_results  | 1           
+ tau                 | 1.0         
+ test_all            | 1           
+ test_batch_size     | 1024        
+ test_flag           | part        
+ topk                | [5, 10]     
+====================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ../data/MovieLens\BoxGNNReader.pkl
+INFO:root:#params: 1186816
+INFO:root:BoxGNN(
+  (gcn): GraphConv(
+    (center_net): CenterIntersection(
+      (layer1): Linear(in_features=64, out_features=64, bias=True)
+      (layer2): Linear(in_features=64, out_features=64, bias=True)
+    )
+    (offset_net): BoxOffsetIntersection()
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+INFO:root:Test Before Training: pass
+INFO:root:Optimizer: Adam

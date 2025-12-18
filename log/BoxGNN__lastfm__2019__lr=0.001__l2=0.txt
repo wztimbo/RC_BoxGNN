@@ -1,0 +1,384 @@
+INFO:root:Namespace(model_name='BoxGNN')
+INFO:root:--------------------------------------------- BEGIN: 2025-11-07 20:56:36 ---------------------------------------------
+INFO:root:
+========================================
+ Arguments       | Values               
+========================================
+ batch_size      | 256                 
+ check_epoch     | 10                  
+ dataset         | lastfm              
+ dropout         | 0.2                 
+ early_stop      | 1                   
+ epoch           | 100                 
+ eval_batch_size | 256                 
+ gpu             | 0                   
+ history_max     | 20                  
+ l2              | 0                   
+ load            | 0                   
+ log_file        | ../log/BoxGNN__la...
+ lr              | 0.001               
+ metric          | ["NDCG","HR"]       
+ model_path      | ../model/BoxGNN/B...
+ optimizer       | Adam                
+ path            | ../data/            
+ random_seed     | 2019                
+ regenerate      | 0                   
+ sep             | \t                  
+ topk            | [5,10]              
+ train           | 1                   
+ verbose         | 20                  
+========================================
+INFO:root:# cuda devices: 1
+INFO:root:Loading data from "../data/", dataset = "lastfm" 
+INFO:root:Namespace(model_name='BoxGNN')
+INFO:root:--------------------------------------------- BEGIN: 2025-11-07 20:58:34 ---------------------------------------------
+INFO:root:
+========================================
+ Arguments       | Values               
+========================================
+ batch_size      | 256                 
+ check_epoch     | 10                  
+ dataset         | lastfm              
+ dropout         | 0.2                 
+ early_stop      | 1                   
+ epoch           | 100                 
+ eval_batch_size | 256                 
+ gpu             | 0                   
+ history_max     | 20                  
+ l2              | 0                   
+ load            | 0                   
+ log_file        | ../log/BoxGNN__la...
+ lr              | 0.001               
+ metric          | ["NDCG","HR"]       
+ model_path      | ../model/BoxGNN/B...
+ optimizer       | Adam                
+ path            | ../data/            
+ random_seed     | 2019                
+ regenerate      | 1                   
+ sep             | \t                  
+ topk            | [5,10]              
+ train           | 1                   
+ verbose         | 20                  
+========================================
+INFO:root:# cuda devices: 1
+INFO:root:Loading data from "../data/", dataset = "lastfm" 
+INFO:root:Namespace(model_name='BoxGNN')
+INFO:root:--------------------------------------------- BEGIN: 2025-11-07 21:00:14 ---------------------------------------------
+INFO:root:
+========================================
+ Arguments       | Values               
+========================================
+ batch_size      | 256                 
+ check_epoch     | 10                  
+ dataset         | lastfm              
+ dropout         | 0.2                 
+ early_stop      | 1                   
+ epoch           | 100                 
+ eval_batch_size | 256                 
+ gpu             | 0                   
+ history_max     | 20                  
+ l2              | 0                   
+ load            | 0                   
+ log_file        | ../log/BoxGNN__la...
+ lr              | 0.001               
+ metric          | ["NDCG","HR"]       
+ model_path      | ../model/BoxGNN/B...
+ optimizer       | Adam                
+ path            | ../data/            
+ random_seed     | 2019                
+ regenerate      | 0                   
+ sep             | \t                  
+ topk            | [5,10]              
+ train           | 1                   
+ verbose         | 20                  
+========================================
+INFO:root:# cuda devices: 1
+INFO:root:Loading data from "../data/", dataset = "lastfm" 
+INFO:root:Namespace(model_name='BoxGNN')
+INFO:root:--------------------------------------------- BEGIN: 2025-11-07 22:12:28 ---------------------------------------------
+INFO:root:
+========================================
+ Arguments       | Values               
+========================================
+ batch_size      | 256                 
+ check_epoch     | 10                  
+ dataset         | lastfm              
+ dropout         | 0.2                 
+ early_stop      | 1                   
+ epoch           | 100                 
+ eval_batch_size | 256                 
+ gpu             | 0                   
+ history_max     | 20                  
+ l2              | 0                   
+ load            | 0                   
+ log_file        | ../log/BoxGNN__la...
+ lr              | 0.001               
+ metric          | ["NDCG","HR"]       
+ model_path      | ../model/BoxGNN/B...
+ optimizer       | Adam                
+ path            | ../data/            
+ random_seed     | 2019                
+ regenerate      | 0                   
+ sep             | \t                  
+ topk            | [5,10]              
+ train           | 1                   
+ verbose         | 20                  
+========================================
+INFO:root:# cuda devices: 1
+INFO:root:Loading data from "../data/", dataset = "lastfm" 
+INFO:root:Namespace(model_name='BoxGNN')
+INFO:root:--------------------------------------------- BEGIN: 2025-11-07 22:14:30 ---------------------------------------------
+INFO:root:
+========================================
+ Arguments       | Values               
+========================================
+ batch_size      | 256                 
+ check_epoch     | 10                  
+ dataset         | lastfm              
+ dropout         | 0.2                 
+ early_stop      | 1                   
+ epoch           | 100                 
+ eval_batch_size | 256                 
+ gpu             | 0                   
+ history_max     | 20                  
+ l2              | 0                   
+ load            | 0                   
+ log_file        | ../log/BoxGNN__la...
+ lr              | 0.001               
+ metric          | ["NDCG","HR"]       
+ model_path      | ../model/BoxGNN/B...
+ optimizer       | Adam                
+ path            | ../data/            
+ random_seed     | 2019                
+ regenerate      | 0                   
+ sep             | \t                  
+ topk            | [5,10]              
+ train           | 1                   
+ verbose         | 20                  
+========================================
+INFO:root:# cuda devices: 1
+INFO:root:Loading data from "../data/", dataset = "lastfm" 
+INFO:root:Namespace(model_name='BoxGNN')
+INFO:root:--------------------------------------------- BEGIN: 2025-11-07 22:16:15 ---------------------------------------------
+INFO:root:
+========================================
+ Arguments       | Values               
+========================================
+ batch_size      | 256                 
+ check_epoch     | 10                  
+ dataset         | lastfm              
+ dropout         | 0.2                 
+ early_stop      | 1                   
+ epoch           | 100                 
+ eval_batch_size | 256                 
+ gpu             | 0                   
+ history_max     | 20                  
+ l2              | 0                   
+ load            | 0                   
+ log_file        | ../log/BoxGNN__la...
+ lr              | 0.001               
+ metric          | ["NDCG","HR"]       
+ model_path      | ../model/BoxGNN/B...
+ optimizer       | Adam                
+ path            | ../data/            
+ random_seed     | 2019                
+ regenerate      | 0                   
+ sep             | \t                  
+ topk            | [5,10]              
+ train           | 1                   
+ verbose         | 20                  
+========================================
+INFO:root:# cuda devices: 1
+INFO:root:Namespace(model_name='BoxGNN')
+INFO:root:--------------------------------------------- BEGIN: 2025-11-07 22:18:36 ---------------------------------------------
+INFO:root:
+========================================
+ Arguments       | Values               
+========================================
+ batch_size      | 256                 
+ check_epoch     | 10                  
+ dataset         | lastfm              
+ dropout         | 0.2                 
+ early_stop      | 1                   
+ epoch           | 100                 
+ eval_batch_size | 256                 
+ gpu             | 0                   
+ history_max     | 20                  
+ l2              | 0                   
+ load            | 0                   
+ log_file        | ../log/BoxGNN__la...
+ lr              | 0.001               
+ metric          | ["NDCG","HR"]       
+ model_path      | ../model/BoxGNN/B...
+ optimizer       | Adam                
+ path            | ../data/            
+ random_seed     | 2019                
+ regenerate      | 0                   
+ sep             | \t                  
+ topk            | [5,10]              
+ train           | 1                   
+ verbose         | 20                  
+========================================
+INFO:root:# cuda devices: 1
+INFO:root:Namespace(model_name='BoxGNN')
+INFO:root:--------------------------------------------- BEGIN: 2025-11-07 22:19:37 ---------------------------------------------
+INFO:root:
+========================================
+ Arguments       | Values               
+========================================
+ batch_size      | 256                 
+ check_epoch     | 10                  
+ dataset         | lastfm              
+ dropout         | 0.2                 
+ early_stop      | 1                   
+ epoch           | 100                 
+ eval_batch_size | 256                 
+ gpu             | 0                   
+ history_max     | 20                  
+ l2              | 0                   
+ load            | 0                   
+ log_file        | ../log/BoxGNN__la...
+ lr              | 0.001               
+ metric          | ["NDCG","HR"]       
+ model_path      | ../model/BoxGNN/B...
+ optimizer       | Adam                
+ path            | ../data/            
+ random_seed     | 2019                
+ regenerate      | 0                   
+ sep             | \t                  
+ topk            | [5,10]              
+ train           | 1                   
+ verbose         | 20                  
+========================================
+INFO:root:# cuda devices: 1
+INFO:root:Done! [0.00 s]
+
+INFO:root:Save corpus to ../data/lastfm\Corpus.pkl
+INFO:root:Namespace(model_name='BoxGNN')
+INFO:root:--------------------------------------------- BEGIN: 2025-11-07 22:22:26 ---------------------------------------------
+INFO:root:
+========================================
+ Arguments       | Values               
+========================================
+ batch_size      | 256                 
+ check_epoch     | 10                  
+ dataset         | lastfm              
+ dropout         | 0.2                 
+ early_stop      | 1                   
+ epoch           | 100                 
+ eval_batch_size | 256                 
+ gpu             | 0                   
+ history_max     | 20                  
+ l2              | 0                   
+ load            | 0                   
+ log_file        | ../log/BoxGNN__la...
+ lr              | 0.001               
+ metric          | ["NDCG","HR"]       
+ model_path      | ../model/BoxGNN/B...
+ optimizer       | Adam                
+ path            | ../data/            
+ random_seed     | 2019                
+ regenerate      | 0                   
+ sep             | \t                  
+ topk            | [5,10]              
+ train           | 1                   
+ verbose         | 20                  
+========================================
+INFO:root:# cuda devices: 1
+INFO:root:Load corpus from ../data/lastfm\Corpus.pkl
+INFO:root:Namespace(model_name='BoxGNN')
+INFO:root:--------------------------------------------- BEGIN: 2025-11-07 22:23:11 ---------------------------------------------
+INFO:root:
+========================================
+ Arguments       | Values               
+========================================
+ batch_size      | 256                 
+ check_epoch     | 10                  
+ dataset         | lastfm              
+ dropout         | 0.2                 
+ early_stop      | 1                   
+ epoch           | 100                 
+ eval_batch_size | 256                 
+ gpu             | 0                   
+ history_max     | 20                  
+ l2              | 0                   
+ load            | 0                   
+ log_file        | ../log/BoxGNN__la...
+ lr              | 0.001               
+ metric          | ["NDCG","HR"]       
+ model_path      | ../model/BoxGNN/B...
+ optimizer       | Adam                
+ path            | ../data/            
+ random_seed     | 2019                
+ regenerate      | 0                   
+ sep             | \t                  
+ topk            | [5,10]              
+ train           | 1                   
+ verbose         | 20                  
+========================================
+INFO:root:# cuda devices: 1
+INFO:root:Load corpus from ../data/lastfm\Corpus.pkl
+INFO:root:Namespace(model_name='BoxGNN')
+INFO:root:--------------------------------------------- BEGIN: 2025-11-07 22:23:40 ---------------------------------------------
+INFO:root:
+========================================
+ Arguments       | Values               
+========================================
+ batch_size      | 256                 
+ check_epoch     | 10                  
+ dataset         | lastfm              
+ dropout         | 0.2                 
+ early_stop      | 1                   
+ epoch           | 100                 
+ eval_batch_size | 256                 
+ gpu             | 0                   
+ history_max     | 20                  
+ l2              | 0                   
+ load            | 0                   
+ log_file        | ../log/BoxGNN__la...
+ lr              | 0.001               
+ metric          | ["NDCG","HR"]       
+ model_path      | ../model/BoxGNN/B...
+ optimizer       | Adam                
+ path            | ../data/            
+ random_seed     | 2019                
+ regenerate      | 0                   
+ sep             | \t                  
+ topk            | [5,10]              
+ train           | 1                   
+ verbose         | 20                  
+========================================
+INFO:root:# cuda devices: 1
+INFO:root:Load corpus from ../data/lastfm\Corpus.pkl
+INFO:root:Namespace(model_name='BoxGNN')
+INFO:root:--------------------------------------------- BEGIN: 2025-11-07 22:24:59 ---------------------------------------------
+INFO:root:
+========================================
+ Arguments       | Values               
+========================================
+ batch_size      | 256                 
+ check_epoch     | 10                  
+ dataset         | lastfm              
+ dropout         | 0.2                 
+ early_stop      | 1                   
+ epoch           | 100                 
+ eval_batch_size | 256                 
+ gpu             | 0                   
+ history_max     | 20                  
+ l2              | 0                   
+ load            | 0                   
+ log_file        | ../log/BoxGNN__la...
+ lr              | 0.001               
+ metric          | ["NDCG","HR"]       
+ model_path      | ../model/BoxGNN/B...
+ optimizer       | Adam                
+ path            | ../data/            
+ random_seed     | 2019                
+ regenerate      | 0                   
+ sep             | \t                  
+ topk            | [5,10]              
+ train           | 1                   
+ verbose         | 20                  
+========================================
+INFO:root:# cuda devices: 1
+INFO:root:Load corpus from ../data/lastfm\Corpus.pkl

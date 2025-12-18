@@ -25,7 +25,7 @@ class BaseRunner(object):
 		parser.add_argument('--test_epoch', type=int, default=-1,
 							help='Print test results every test_epoch (-1 means no print).')
 		parser.add_argument('--early_stop', type=int, default=10,
-							help='The number of epochs when dev results drop continuously.')
+							help='The number of epochs when val results drop continuously.')
 		parser.add_argument('--lr', type=float, default=1e-3,
 							help='Learning rate.')
 		parser.add_argument('--l2', type=float, default=0,
@@ -36,11 +36,11 @@ class BaseRunner(object):
 							help='Batch size during testing.')
 		parser.add_argument('--optimizer', type=str, default='Adam',
 							help='optimizer: SGD, Adam, Adagrad, Adadelta')
-		parser.add_argument('--num_workers', type=int, default=5,
+		parser.add_argument('--num_workers', type=int, default=0,
 							help='Number of processors when prepare batches in DataLoader')
 		parser.add_argument('--pin_memory', type=int, default=0,
 							help='pin_memory in DataLoader')
-		parser.add_argument('--topk', type=str, default='5,10,20,50',
+		parser.add_argument('--topk', type=str, default=[5,10,20,50],
 							help='The number of items recommended to each user.')
 		parser.add_argument('--metric', type=str, default='NDCG,HR',
 							help='metrics: NDCG, HR')
@@ -90,7 +90,7 @@ class BaseRunner(object):
 		self.optimizer_name = args.optimizer
 		self.num_workers = args.num_workers
 		self.pin_memory = args.pin_memory
-		self.topk = [int(x) for x in args.topk.split(',')]
+		self.topk = [int(x) for x in args.topk]
 		self.metrics = [m.strip().upper() for m in args.metric.split(',')]
 		self.main_metric = '{}@{}'.format(self.metrics[0], self.topk[0]) if not len(args.main_metric) else args.main_metric # early stop based on main_metric
 		self.main_topk = int(self.main_metric.split("@")[1]) if "@" in self.main_metric else 0
@@ -133,11 +133,11 @@ class BaseRunner(object):
 				if len(model.check_list) > 0 and self.check_epoch > 0 and epoch % self.check_epoch == 0:
 					utils.check(model.check_list)
 
-				# Record dev results
+				# Record val results
 				dev_result = self.evaluate(data_dict['dev'], [self.main_topk], self.metrics)
 				dev_results.append(dev_result)
 				main_metric_results.append(dev_result[self.main_metric])
-				logging_str = 'Epoch {:<5} loss={:<.4f} [{:<3.1f} s]	dev=({})'.format(
+				logging_str = 'Epoch {:<5} loss={:<.4f} [{:<3.1f} s]	val=({})'.format(
 					epoch + 1, loss, training_time, utils.format_metric(dev_result))
 
 				# Test
@@ -155,7 +155,7 @@ class BaseRunner(object):
 				logging.info(logging_str)
 
 				if self.early_stop > 0 and self.eval_termination(main_metric_results):
-					logging.info("Early stop at %d based on dev result." % (epoch + 1))
+					logging.info("Early stop at %d based on val result." % (epoch + 1))
 					break
 
 		except KeyboardInterrupt:
@@ -165,9 +165,9 @@ class BaseRunner(object):
 				logging.info(os.linesep + '-' * 45 + ' END: ' + utils.get_time() + ' ' + '-' * 45)
 				exit(1)
 
-		# Find the best dev result across iterations
+		# Find the best val result across iterations
 		best_epoch = main_metric_results.index(max(main_metric_results))
-		logging.info(os.linesep + "Best Iter(dev)={:>5}\t dev=({}) [{:<.1f} s] ".format(
+		logging.info(os.linesep + "Best Iter(val)={:>5}\t val=({}) [{:<.1f} s] ".format(
 			best_epoch + 1, utils.format_metric(dev_results[best_epoch]), self.time[1] - self.time[0]))
 		model.load_model()
 
@@ -220,6 +220,7 @@ class BaseRunner(object):
 		:return: result dict (key: metric@k)
 		"""
 		predictions = self.predict(dataset)
+		print('prediction:',predictions)
 		return self.evaluate_method(predictions, topks, metrics)
 
 	def predict(self, dataset: BaseModel.Dataset, save_prediction: bool = False) -> np.ndarray:

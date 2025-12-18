@@ -1,0 +1,45 @@
+INFO:root:Namespace(model_name='BPR')
+INFO:root:--------------------------------------------- BEGIN: 2025-11-08 15:00:14 ---------------------------------------------
+INFO:root:
+===========================================
+ Arguments          | Values               
+===========================================
+ batch_size         | 1024                
+ buffer             | 1                   
+ check_epoch        | 10                  
+ data_path          | data/               
+ dataset            | Grocery_and_Gourm...
+ dropout            | 0.2                 
+ early_stop         | 1                   
+ emb_size           | 64                  
+ epoch              | 100                 
+ eval_batch_size    | 256                 
+ gpu                | 0                   
+ l2                 | 1e-05               
+ load               | 0                   
+ log_file           | ../log/BPR__Groce...
+ lr                 | 0.0001              
+ metric             | ["NDCG","HR"]       
+ model_path         | ../model/BPR/BPR_...
+ num_neg_sample     | 1                   
+ optimizer          | Adam                
+ path               | ../data/            
+ random_seed        | 0                   
+ regenerate         | 0                   
+ save_final_results | 1                   
+ sep                | \t                  
+ topk               | [5,10]              
+ train              | 1                   
+ verbose            | 20                  
+===========================================
+INFO:root:# cuda devices: 1
+INFO:root:Load corpus from ../data/Grocery_and_Gourmet_Food\Corpus.pkl
+INFO:root:#params: 1503970
+INFO:root:BPR(
+  (u_embeddings): Embedding(14681, 64)
+  (i_embeddings): Embedding(8457, 64)
+  (user_bias): Embedding(14681, 1)
+  (item_bias): Embedding(8457, 1)
+)
+INFO:root:Test Before Training: (HR@10:0.1085,HR@5:0.0611,NDCG@10:0.0520,NDCG@5:0.0368)
+INFO:root:Optimizer: Adam

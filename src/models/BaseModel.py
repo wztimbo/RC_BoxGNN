@@ -41,19 +41,16 @@ class BaseModel(nn.Module):
 		self.buffer = args.buffer
 		self.optimizer = None
 		self.check_list = list()  # observe tensors in check_list every check_epoch
-
+		self.test_all=args.test_all
 	"""
 	Key Methods
 	"""
 	def _define_params(self):
 		pass
 
-	def forward(self, feed_dict: dict) -> dict:
-		"""
-		:param feed_dict: batch prepared in Dataset
-		:return: out_dict, including prediction with shape [batch_size, n_candidates]
-		"""
+	def forward(self, batch):
 		pass
+
 
 	def loss(self, out_dict: dict) -> torch.Tensor:
 		pass
@@ -103,7 +100,9 @@ class BaseModel(nn.Module):
 
 			self.buffer_dict = dict()
 			#self.data = utils.df_to_dict(corpus.data_df[phase])#this raise the VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences warning
+
 			self.data = corpus.data_df[phase].to_dict('list')
+
 			# ↑ DataFrame is not compatible with multi-thread operations
 
 		def __len__(self):
@@ -119,7 +118,18 @@ class BaseModel(nn.Module):
 
 		# ! Key method to construct input data for a single instance
 		def _get_feed_dict(self, index: int) -> dict:
-			pass
+			row = self.corpus.data_df[self.phase].iloc[index]
+			user = int(row['user_id'])
+			pos_item = int(row['item_id'])
+			
+			if self.phase == 'train':
+				# 随机采样一个负样本
+				neg_item = np.random.randint(0, self.corpus.n_items)
+				while neg_item in self.corpus.user_history[user]:
+					neg_item = np.random.randint(0, self.corpus.n_items)
+				return {'user_id': user, 'pos_item': pos_item, 'neg_item': neg_item}
+			else:
+				return {'user_id': user, 'item_id': pos_item}
 
 		# Called after initialization
 		def prepare(self):
@@ -143,12 +153,13 @@ class BaseModel(nn.Module):
 						stack_val = np.array([d[key] for d in feed_dicts])
 				else:
 					stack_val = np.array([d[key] for d in feed_dicts])
-				if stack_val.dtype == np.object:  # inconsistent length (e.g., history)
+				if stack_val.dtype == object:  # inconsistent length (e.g., history)
 					feed_dict[key] = pad_sequence([torch.from_numpy(x) for x in stack_val], batch_first=True)
 				else:
 					feed_dict[key] = torch.from_numpy(stack_val)
 			feed_dict['batch_size'] = len(feed_dicts)
 			feed_dict['phase'] = self.phase
+
 			return feed_dict
 
 class GeneralModel(BaseModel):
@@ -160,7 +171,7 @@ class GeneralModel(BaseModel):
 							help='The number of negative items during training.')
 		parser.add_argument('--dropout', type=float, default=0,
 							help='Dropout probability for each deep layer')
-		parser.add_argument('--test_all', type=int, default=0,
+		parser.add_argument('--test_all', type=int, default=1,
 							help='Whether testing on all the items.')
 		return BaseModel.parse_model_args(parser)
 

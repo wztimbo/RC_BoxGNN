@@ -15,6 +15,7 @@ from models.developing import *
 from models.context import *
 from models.context_seq import *
 from models.reranker import *
+from models import BoxGNN,BPR
 from utils import utils
 
 
@@ -77,6 +78,7 @@ def main():
 
 	# Run model
 	runner = runner_name(args)
+
 	logging.info('Test Before Training: ' + runner.print_res(data_dict['test']))
 	if args.load > 0:
 		model.load_model()
@@ -85,7 +87,7 @@ def main():
 
 	# Evaluate final results
 	eval_res = runner.print_res(data_dict['dev'])
-	logging.info(os.linesep + 'Dev  After Training: ' + eval_res)
+	logging.info(os.linesep + 'Val  After Training: ' + eval_res)
 	eval_res = runner.print_res(data_dict['test'])
 	logging.info(os.linesep + 'Test After Training: ' + eval_res)
 	if args.save_final_results==1: # save the prediction results
@@ -96,6 +98,9 @@ def main():
 
 
 def save_rec_results(dataset, runner, topk):
+	if init_args.model_name == "BoxGNN":
+		print("**PASS**")
+		return 
 	model_name = '{0}{1}'.format(init_args.model_name,init_args.model_mode)
 	result_path = os.path.join(runner.log_path,runner.save_appendix, 'rec-{}-{}.csv'.format(model_name,dataset.phase))
 	utils.check_dir(result_path)
@@ -114,6 +119,7 @@ def save_rec_results(dataset, runner, topk):
 		rec_df['pCTR'] = predictions
 		rec_df['label'] = labels
 		rec_df.to_csv(result_path, sep=args.sep, index=False)
+
 	elif init_args.model_mode in ['TopK','']: # TopK Ranking task
 		logging.info('Saving top-{} recommendation results to: {}'.format(topk, result_path))
 		predictions = runner.predict(dataset)  # n_users, n_candidates
@@ -130,6 +136,7 @@ def save_rec_results(dataset, runner, topk):
 		rec_df['rec_items'] = rec_items
 		rec_df['rec_predictions'] = rec_predictions
 		rec_df.to_csv(result_path, sep=args.sep, index=False)
+
 	elif init_args.model_mode in ['Impression','General','Sequential']: # List-wise reranking task: Impression is reranking task for general/seq baseranker. General/Sequential is reranking task for rerankers with general/sequential input.
 		logging.info('Saving all recommendation results to: {}'.format(result_path))
 		predictions = runner.predict(dataset)  # n_users, n_candidates

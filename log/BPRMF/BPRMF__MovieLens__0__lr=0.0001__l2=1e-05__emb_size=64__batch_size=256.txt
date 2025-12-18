@@ -1,0 +1,37 @@
+INFO:root:Namespace(model_name='BPRMF', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2025-12-04 17:28:55 ---------------------------------------------
+INFO:root:
+======================================
+ Arguments          | Values          
+======================================
+ batch_size         | 256            
+ data_appendix      |                
+ dataset            | MovieLens      
+ dropout            | 0              
+ early_stop         | 10             
+ emb_size           | 64             
+ epoch              | 200            
+ eval_batch_size    | 256            
+ gpu                | 0              
+ l2                 | 1e-05          
+ lr                 | 0.0001         
+ main_metric        |                
+ num_neg            | 1              
+ num_workers        | 5              
+ optimizer          | Adam           
+ random_seed        | 0              
+ save_final_results | 1              
+ test_all           | 1              
+ topk               | [5, 10, 20, 50]
+======================================
+INFO:root:Device: cuda
+INFO:root:Load corpus from ../data/MovieLens\BaseReader.pkl
+INFO:root:#params: 586176
+INFO:root:BPRMF(
+  (u_embeddings): Embedding(6033, 64)
+  (i_embeddings): Embedding(3126, 64)
+)
+INFO:root:Test Before Training: (HR@5:0.0000,NDCG@5:0.0000,HR@10:0.0000,NDCG@10:0.0000,HR@20:0.0000,NDCG@20:0.0000,HR@50:0.0000,NDCG@50:0.0000)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.6931 [21.5 s]	val=(HR@5:0.0000,NDCG@5:0.0000) [28.0 s] *
+INFO:root:Epoch 2     loss=0.6931 [19.8 s]	val=(HR@5:0.0000,NDCG@5:0.0000) [14.8 s] *

@@ -1,0 +1,113 @@
+INFO:root:Namespace(model_name='BPRMF', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2025-12-15 15:40:29 ---------------------------------------------
+INFO:root:
+======================================
+ Arguments          | Values          
+======================================
+ batch_size         | 256            
+ data_appendix      |                
+ dataset            | lastfm         
+ dropout            | 0              
+ early_stop         | 10             
+ emb_size           | 64             
+ epoch              | 1              
+ eval_batch_size    | 256            
+ gpu                | 0              
+ l2                 | 0              
+ lr                 | 0.001          
+ main_metric        |                
+ num_neg            | 1              
+ num_workers        | 5              
+ optimizer          | Adam           
+ random_seed        | 0              
+ save_final_results | 1              
+ test_all           | 1              
+ topk               | [5, 10, 20, 50]
+======================================
+INFO:root:Device: cpu
+INFO:root:Reading data from "../data/", dataset = "lastfm" 
+INFO:root:Namespace(model_name='BPRMF', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2025-12-15 15:41:19 ---------------------------------------------
+INFO:root:
+======================================
+ Arguments          | Values          
+======================================
+ batch_size         | 256            
+ data_appendix      |                
+ dataset            | lastfm         
+ dropout            | 0              
+ early_stop         | 10             
+ emb_size           | 64             
+ epoch              | 1              
+ eval_batch_size    | 256            
+ gpu                | 0              
+ l2                 | 0              
+ lr                 | 0.001          
+ main_metric        |                
+ num_neg            | 1              
+ num_workers        | 5              
+ optimizer          | Adam           
+ random_seed        | 0              
+ save_final_results | 1              
+ test_all           | 1              
+ topk               | [5, 10, 20, 50]
+======================================
+INFO:root:Device: cpu
+INFO:root:Reading data from "../data/", dataset = "lastfm" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 1892, "# item": 17632, "# entry": 92834
+INFO:root:Save corpus to ../data/lastfm\BaseReader.pkl
+INFO:root:#params: 1249664
+INFO:root:BPRMF(
+  (u_embeddings): Embedding(1893, 64)
+  (i_embeddings): Embedding(17633, 64)
+)
+INFO:root:Namespace(model_name='BPRMF', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2025-12-15 15:43:39 ---------------------------------------------
+INFO:root:
+======================================
+ Arguments          | Values          
+======================================
+ batch_size         | 256            
+ data_appendix      |                
+ dataset            | lastfm         
+ dropout            | 0              
+ early_stop         | 10             
+ emb_size           | 64             
+ epoch              | 1              
+ eval_batch_size    | 256            
+ gpu                | 0              
+ l2                 | 0              
+ lr                 | 0.001          
+ main_metric        |                
+ num_neg            | 1              
+ num_workers        | 5              
+ optimizer          | Adam           
+ random_seed        | 0              
+ save_final_results | 1              
+ test_all           | 1              
+ topk               | [5, 10, 20, 50]
+======================================
+INFO:root:Device: cpu
+INFO:root:Load corpus from ../data/lastfm\BaseReader.pkl
+INFO:root:#params: 1249664
+INFO:root:BPRMF(
+  (u_embeddings): Embedding(1893, 64)
+  (i_embeddings): Embedding(17633, 64)
+)
+INFO:root:Test Before Training: (HR@5:0.0005,NDCG@5:0.0002,HR@10:0.0016,NDCG@10:0.0006,HR@20:0.0016,NDCG@20:0.0006,HR@50:0.0027,NDCG@50:0.0008)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.6733 [19.4 s]	val=(HR@5:0.1567,NDCG@5:0.1143) [16.7 s] *
+INFO:root:
+Best Iter(val)=    1	 val=(HR@5:0.1567,NDCG@5:0.1143) [36.1 s] 
+INFO:root:Load model from ../model/BPRMF/BPRMF__lastfm__0__lr=0.001__l2=0__emb_size=64__batch_size=256.pt
+INFO:root:
+Val  After Training: (HR@5:0.1567,NDCG@5:0.1143,HR@10:0.2023,NDCG@10:0.1292,HR@20:0.2581,NDCG@20:0.1432,HR@50:0.3585,NDCG@50:0.1631)
+INFO:root:
+Test After Training: (HR@5:0.1672,NDCG@5:0.1182,HR@10:0.2245,NDCG@10:0.1367,HR@20:0.2803,NDCG@20:0.1509,HR@50:0.4013,NDCG@50:0.1746)
+INFO:root:Saving top-100 recommendation results to: ../log/BPRMF\BPRMF__lastfm__0__lr=0\rec-BPRMF-dev.csv
+INFO:root:dev Prediction results saved!
+INFO:root:Saving top-100 recommendation results to: ../log/BPRMF\BPRMF__lastfm__0__lr=0\rec-BPRMF-test.csv
+INFO:root:test Prediction results saved!
+INFO:root:
+--------------------------------------------- END: 2025-12-15 15:45:54 ---------------------------------------------

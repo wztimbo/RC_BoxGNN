@@ -117,7 +117,7 @@ class LGCNEncoder(nn.Module):
 		self.norm_adj = norm_adj
 
 		self.embedding_dict = self._init_model()
-		self.sparse_norm_adj = self._convert_sp_mat_to_sp_tensor(self.norm_adj).cuda()
+		self.sparse_norm_adj = self._convert_sp_mat_to_sp_tensor(self.norm_adj).to(torch.device("cpu"))
 
 	def _init_model(self):
 		initializer = nn.init.xavier_uniform_

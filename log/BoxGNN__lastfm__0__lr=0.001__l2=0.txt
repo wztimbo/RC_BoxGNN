@@ -1,0 +1,458 @@
+INFO:root:Namespace(model_name='BoxGNN')
+INFO:root:--------------------------------------------- BEGIN: 2025-11-08 15:08:04 ---------------------------------------------
+INFO:root:
+============================================
+ Arguments           | Values               
+============================================
+ Ks                  | [10, 20, 50]        
+ batch_size          | 1024                
+ batch_test_flag     | True                
+ beta                | 0.3                 
+ check_epoch         | 10                  
+ context_hops        | 3                   
+ cuda                | True                
+ data_path           | data/               
+ dataset             | lastfm              
+ dim                 | 64                  
+ dropout             | 0.2                 
+ early_stop          | 1                   
+ epoch               | 2000                
+ eval_batch_size     | 256                 
+ eval_rnd_neg        | False               
+ eval_step           | 5                   
+ gpu                 | 0                   
+ gpu_id              | 0                   
+ graph_type          | all                 
+ l2                  | 0                   
+ load                | 0                   
+ log_file            | ../log/BoxGNN__la...
+ logit_cal           | box                 
+ lr                  | 0.001               
+ main_metric         |                     
+ mess_dropout        | True                
+ mess_dropout_rate   | 0.1                 
+ metric              | ["NDCG","HR"]       
+ model               | boxgnn              
+ model_path          | ../model/BoxGNN/B...
+ node_dropout        | True                
+ node_dropout_rate   | 0.5                 
+ num_neg_sample      | 1                   
+ num_workers         | 5                   
+ optimizer           | Adam                
+ out_dir             | ./weights/          
+ path                | ../data/            
+ pin_memory          | 0                   
+ pretrain_model_path |                     
+ random_seed         | 0                   
+ regenerate          | 0                   
+ save                | False               
+ save_final_results  | 1                   
+ sep                 | \t                  
+ tau                 | 1.0                 
+ test_batch_size     | 1024                
+ test_epoch          | -1                  
+ test_flag           | part                
+ topk                | [5,10]              
+ train               | 1                   
+ verbose             | 20                  
+============================================
+INFO:root:# cuda devices: 1
+INFO:root:Namespace(model_name='BoxGNN')
+INFO:root:--------------------------------------------- BEGIN: 2025-11-08 15:09:50 ---------------------------------------------
+INFO:root:
+============================================
+ Arguments           | Values               
+============================================
+ Ks                  | [10, 20, 50]        
+ batch_size          | 1024                
+ batch_test_flag     | True                
+ beta                | 0.3                 
+ check_epoch         | 10                  
+ context_hops        | 3                   
+ cuda                | True                
+ data_path           | data/               
+ dataset             | lastfm              
+ dim                 | 64                  
+ dropout             | 0.2                 
+ early_stop          | 1                   
+ epoch               | 2000                
+ eval_batch_size     | 256                 
+ eval_rnd_neg        | False               
+ eval_step           | 5                   
+ gpu                 | 0                   
+ gpu_id              | 0                   
+ graph_type          | all                 
+ l2                  | 0                   
+ load                | 0                   
+ log_file            | ../log/BoxGNN__la...
+ logit_cal           | box                 
+ lr                  | 0.001               
+ main_metric         |                     
+ mess_dropout        | True                
+ mess_dropout_rate   | 0.1                 
+ metric              | ["NDCG","HR"]       
+ model               | boxgnn              
+ model_path          | ../model/BoxGNN/B...
+ node_dropout        | True                
+ node_dropout_rate   | 0.5                 
+ num_neg_sample      | 1                   
+ num_workers         | 5                   
+ optimizer           | Adam                
+ out_dir             | ./weights/          
+ path                | ../data/            
+ pin_memory          | 0                   
+ pretrain_model_path |                     
+ random_seed         | 0                   
+ regenerate          | 0                   
+ save                | False               
+ save_final_results  | 1                   
+ sep                 | \t                  
+ tau                 | 1.0                 
+ test_batch_size     | 1024                
+ test_epoch          | -1                  
+ test_flag           | part                
+ topk                | [5,10]              
+ train               | 1                   
+ verbose             | 20                  
+============================================
+INFO:root:# cuda devices: 1
+INFO:root:Namespace(model_name='BoxGNN')
+INFO:root:--------------------------------------------- BEGIN: 2025-11-08 15:10:30 ---------------------------------------------
+INFO:root:
+============================================
+ Arguments           | Values               
+============================================
+ Ks                  | [10, 20, 50]        
+ batch_size          | 1024                
+ batch_test_flag     | True                
+ beta                | 0.3                 
+ check_epoch         | 10                  
+ context_hops        | 3                   
+ cuda                | True                
+ data_path           | data/               
+ dataset             | lastfm              
+ dim                 | 64                  
+ dropout             | 0.2                 
+ early_stop          | 1                   
+ epoch               | 2000                
+ eval_batch_size     | 256                 
+ eval_rnd_neg        | False               
+ eval_step           | 5                   
+ gpu                 | 0                   
+ gpu_id              | 0                   
+ graph_type          | all                 
+ l2                  | 0                   
+ load                | 0                   
+ log_file            | ../log/BoxGNN__la...
+ logit_cal           | box                 
+ lr                  | 0.001               
+ main_metric         |                     
+ mess_dropout        | True                
+ mess_dropout_rate   | 0.1                 
+ metric              | ["NDCG","HR"]       
+ model               | boxgnn              
+ model_path          | ../model/BoxGNN/B...
+ node_dropout        | True                
+ node_dropout_rate   | 0.5                 
+ num_neg_sample      | 1                   
+ num_workers         | 5                   
+ optimizer           | Adam                
+ out_dir             | ./weights/          
+ path                | ../data/            
+ pin_memory          | 0                   
+ pretrain_model_path |                     
+ random_seed         | 0                   
+ regenerate          | 0                   
+ save                | False               
+ save_final_results  | 1                   
+ sep                 | \t                  
+ tau                 | 1.0                 
+ test_batch_size     | 1024                
+ test_epoch          | -1                  
+ test_flag           | part                
+ topk                | [5,10]              
+ train               | 1                   
+ verbose             | 20                  
+============================================
+INFO:root:# cuda devices: 1
+INFO:root:Namespace(model_name='BoxGNN')
+INFO:root:--------------------------------------------- BEGIN: 2025-11-08 15:11:41 ---------------------------------------------
+INFO:root:
+============================================
+ Arguments           | Values               
+============================================
+ Ks                  | [10, 20, 50]        
+ batch_size          | 1024                
+ batch_test_flag     | True                
+ beta                | 0.3                 
+ check_epoch         | 10                  
+ context_hops        | 3                   
+ cuda                | True                
+ data_path           | data/               
+ dataset             | lastfm              
+ dim                 | 64                  
+ dropout             | 0.2                 
+ early_stop          | 1                   
+ epoch               | 2000                
+ eval_batch_size     | 256                 
+ eval_rnd_neg        | False               
+ eval_step           | 5                   
+ gpu                 | 0                   
+ gpu_id              | 0                   
+ graph_type          | all                 
+ l2                  | 0                   
+ load                | 0                   
+ log_file            | ../log/BoxGNN__la...
+ logit_cal           | box                 
+ lr                  | 0.001               
+ main_metric         |                     
+ mess_dropout        | True                
+ mess_dropout_rate   | 0.1                 
+ metric              | ["NDCG","HR"]       
+ model               | boxgnn              
+ model_path          | ../model/BoxGNN/B...
+ node_dropout        | True                
+ node_dropout_rate   | 0.5                 
+ num_neg_sample      | 1                   
+ num_workers         | 5                   
+ optimizer           | Adam                
+ out_dir             | ./weights/          
+ path                | ../data/            
+ pin_memory          | 0                   
+ pretrain_model_path |                     
+ random_seed         | 0                   
+ regenerate          | 0                   
+ save                | False               
+ save_final_results  | 1                   
+ sep                 | \t                  
+ tau                 | 1.0                 
+ test_batch_size     | 1024                
+ test_epoch          | -1                  
+ test_flag           | part                
+ topk                | [5,10]              
+ train               | 1                   
+ verbose             | 20                  
+============================================
+INFO:root:# cuda devices: 1
+INFO:root:Namespace(model_name='BoxGNN')
+INFO:root:--------------------------------------------- BEGIN: 2025-11-08 15:12:52 ---------------------------------------------
+INFO:root:
+============================================
+ Arguments           | Values               
+============================================
+ Ks                  | [10, 20, 50]        
+ batch_size          | 1024                
+ batch_test_flag     | True                
+ beta                | 0.3                 
+ check_epoch         | 10                  
+ context_hops        | 3                   
+ cuda                | True                
+ data_path           | data/               
+ dataset             | lastfm              
+ dim                 | 64                  
+ dropout             | 0.2                 
+ early_stop          | 1                   
+ epoch               | 2000                
+ eval_batch_size     | 256                 
+ eval_rnd_neg        | False               
+ eval_step           | 5                   
+ gpu                 | 0                   
+ gpu_id              | 0                   
+ graph_type          | all                 
+ inverse_r           | True                
+ l2                  | 0                   
+ load                | 0                   
+ log_file            | ../log/BoxGNN__la...
+ logit_cal           | box                 
+ lr                  | 0.001               
+ main_metric         |                     
+ mess_dropout        | True                
+ mess_dropout_rate   | 0.1                 
+ metric              | ["NDCG","HR"]       
+ model               | boxgnn              
+ model_path          | ../model/BoxGNN/B...
+ node_dropout        | True                
+ node_dropout_rate   | 0.5                 
+ num_neg_sample      | 1                   
+ num_workers         | 5                   
+ optimizer           | Adam                
+ out_dir             | ./weights/          
+ path                | ../data/            
+ pin_memory          | 0                   
+ pretrain_model_path |                     
+ random_seed         | 0                   
+ regenerate          | 0                   
+ save                | False               
+ save_final_results  | 1                   
+ sep                 | \t                  
+ tau                 | 1.0                 
+ test_batch_size     | 1024                
+ test_epoch          | -1                  
+ test_flag           | part                
+ topk                | [5,10]              
+ train               | 1                   
+ verbose             | 20                  
+============================================
+INFO:root:# cuda devices: 1
+INFO:root:Done! [0.06 s]
+
+INFO:root:Save corpus to ../data/lastfm\Corpus.pkl
+INFO:root:#params: 1
+INFO:root:BoxGNN(
+  (item_bias): Embedding(1, 1)
+  (gcn): GraphConv(
+    (center_net): CenterIntersection(
+      (layer1): Linear(in_features=64, out_features=64, bias=True)
+      (layer2): Linear(in_features=64, out_features=64, bias=True)
+    )
+    (offset_net): BoxOffsetIntersection()
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+INFO:root:Namespace(model_name='BoxGNN')
+INFO:root:--------------------------------------------- BEGIN: 2025-11-08 15:13:48 ---------------------------------------------
+INFO:root:
+============================================
+ Arguments           | Values               
+============================================
+ Ks                  | [10, 20, 50]        
+ batch_size          | 1024                
+ batch_test_flag     | True                
+ beta                | 0.3                 
+ check_epoch         | 10                  
+ context_hops        | 3                   
+ cuda                | True                
+ data_path           | data/               
+ dataset             | lastfm              
+ dim                 | 64                  
+ dropout             | 0.2                 
+ early_stop          | 1                   
+ epoch               | 2000                
+ eval_batch_size     | 256                 
+ eval_rnd_neg        | False               
+ eval_step           | 5                   
+ gpu                 | 0                   
+ gpu_id              | 0                   
+ graph_type          | all                 
+ inverse_r           | True                
+ l2                  | 0                   
+ load                | 0                   
+ log_file            | ../log/BoxGNN__la...
+ logit_cal           | box                 
+ lr                  | 0.001               
+ main_metric         |                     
+ mess_dropout        | True                
+ mess_dropout_rate   | 0.1                 
+ metric              | ["NDCG","HR"]       
+ model               | boxgnn              
+ model_path          | ../model/BoxGNN/B...
+ node_dropout        | True                
+ node_dropout_rate   | 0.5                 
+ num_neg_sample      | 1                   
+ num_workers         | 5                   
+ optimizer           | Adam                
+ out_dir             | ./weights/          
+ path                | ../data/            
+ pin_memory          | 0                   
+ pretrain_model_path |                     
+ random_seed         | 0                   
+ regenerate          | 0                   
+ save                | False               
+ save_final_results  | 1                   
+ sep                 | \t                  
+ tau                 | 1.0                 
+ test_batch_size     | 1024                
+ test_epoch          | -1                  
+ test_flag           | part                
+ topk                | [5,10]              
+ train               | 1                   
+ verbose             | 20                  
+============================================
+INFO:root:# cuda devices: 1
+INFO:root:Load corpus from ../data/lastfm\Corpus.pkl
+INFO:root:#params: 1
+INFO:root:BoxGNN(
+  (item_bias): Embedding(1, 1)
+  (gcn): GraphConv(
+    (center_net): CenterIntersection(
+      (layer1): Linear(in_features=64, out_features=64, bias=True)
+      (layer2): Linear(in_features=64, out_features=64, bias=True)
+    )
+    (offset_net): BoxOffsetIntersection()
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+INFO:root:Namespace(model_name='BoxGNN')
+INFO:root:--------------------------------------------- BEGIN: 2025-11-08 15:15:03 ---------------------------------------------
+INFO:root:
+============================================
+ Arguments           | Values               
+============================================
+ Ks                  | [10, 20, 50]        
+ batch_size          | 1024                
+ batch_test_flag     | True                
+ beta                | 0.3                 
+ check_epoch         | 10                  
+ context_hops        | 3                   
+ cuda                | True                
+ data_path           | data/               
+ dataset             | lastfm              
+ dim                 | 64                  
+ dropout             | 0.2                 
+ early_stop          | 1                   
+ epoch               | 2000                
+ eval_batch_size     | 256                 
+ eval_rnd_neg        | False               
+ eval_step           | 5                   
+ gpu                 | 0                   
+ gpu_id              | 0                   
+ graph_type          | all                 
+ inverse_r           | True                
+ l2                  | 0                   
+ load                | 0                   
+ log_file            | ../log/BoxGNN__la...
+ logit_cal           | box                 
+ lr                  | 0.001               
+ main_metric         |                     
+ mess_dropout        | True                
+ mess_dropout_rate   | 0.1                 
+ metric              | ["NDCG","HR"]       
+ model               | boxgnn              
+ model_path          | ../model/BoxGNN/B...
+ node_dropout        | True                
+ node_dropout_rate   | 0.5                 
+ num_neg_sample      | 1                   
+ num_workers         | 5                   
+ optimizer           | Adam                
+ out_dir             | ./weights/          
+ path                | ../data/            
+ pin_memory          | 0                   
+ pretrain_model_path |                     
+ random_seed         | 0                   
+ regenerate          | 0                   
+ save                | False               
+ save_final_results  | 1                   
+ sep                 | \t                  
+ tau                 | 1.0                 
+ test_batch_size     | 1024                
+ test_epoch          | -1                  
+ test_flag           | part                
+ topk                | [5,10]              
+ train               | 1                   
+ verbose             | 20                  
+============================================
+INFO:root:# cuda devices: 1
+INFO:root:Load corpus from ../data/lastfm\Corpus.pkl
+INFO:root:#params: 1
+INFO:root:BoxGNN(
+  (item_bias): Embedding(1, 1)
+  (gcn): GraphConv(
+    (center_net): CenterIntersection(
+      (layer1): Linear(in_features=64, out_features=64, bias=True)
+      (layer2): Linear(in_features=64, out_features=64, bias=True)
+    )
+    (offset_net): BoxOffsetIntersection()
+    (dropout): Dropout(p=0.1, inplace=False)
+  )
+)
+INFO:root:Optimizer: Adam

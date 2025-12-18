@@ -1,0 +1,212 @@
+INFO:root:Namespace(model_name='BPRMF', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2025-12-04 17:17:11 ---------------------------------------------
+INFO:root:
+======================================
+ Arguments          | Values          
+======================================
+ batch_size         | 256            
+ data_appendix      |                
+ dataset            | MovieLens      
+ dropout            | 0              
+ early_stop         | 10             
+ emb_size           | 64             
+ epoch              | 200            
+ eval_batch_size    | 256            
+ gpu                | 0              
+ l2                 | 1e-06          
+ lr                 | 0.001          
+ main_metric        |                
+ num_neg            | 1              
+ num_workers        | 5              
+ optimizer          | Adam           
+ random_seed        | 0              
+ save_final_results | 1              
+ test_all           | 1              
+ topk               | [5, 10, 20, 50]
+======================================
+INFO:root:Device: cuda
+INFO:root:Reading data from "../data/", dataset = "MovieLens" 
+INFO:root:Namespace(model_name='BPRMF', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2025-12-04 17:18:14 ---------------------------------------------
+INFO:root:
+======================================
+ Arguments          | Values          
+======================================
+ batch_size         | 256            
+ data_appendix      |                
+ dataset            | MovieLens      
+ dropout            | 0              
+ early_stop         | 10             
+ emb_size           | 64             
+ epoch              | 200            
+ eval_batch_size    | 256            
+ gpu                | 0              
+ l2                 | 1e-06          
+ lr                 | 0.001          
+ main_metric        |                
+ num_neg            | 1              
+ num_workers        | 5              
+ optimizer          | Adam           
+ random_seed        | 0              
+ save_final_results | 1              
+ test_all           | 1              
+ topk               | [5, 10, 20, 50]
+======================================
+INFO:root:Device: cuda
+INFO:root:Reading data from "../data/", dataset = "MovieLens" 
+INFO:root:Namespace(model_name='BPRMF', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2025-12-04 17:18:36 ---------------------------------------------
+INFO:root:
+======================================
+ Arguments          | Values          
+======================================
+ batch_size         | 256            
+ data_appendix      |                
+ dataset            | MovieLens      
+ dropout            | 0              
+ early_stop         | 10             
+ emb_size           | 64             
+ epoch              | 200            
+ eval_batch_size    | 256            
+ gpu                | 0              
+ l2                 | 1e-06          
+ lr                 | 0.001          
+ main_metric        |                
+ num_neg            | 1              
+ num_workers        | 5              
+ optimizer          | Adam           
+ random_seed        | 0              
+ save_final_results | 1              
+ test_all           | 1              
+ topk               | [5, 10, 20, 50]
+======================================
+INFO:root:Device: cuda
+INFO:root:Reading data from "../data/", dataset = "MovieLens" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 6032, "# item": 3125, "# entry": 574197
+INFO:root:Save corpus to ../data/MovieLens\BaseReader.pkl
+INFO:root:#params: 586176
+INFO:root:BPRMF(
+  (u_embeddings): Embedding(6033, 64)
+  (i_embeddings): Embedding(3126, 64)
+)
+INFO:root:Test Before Training: (HR@5:0.0000,NDCG@5:0.0000,HR@10:0.0000,NDCG@10:0.0000,HR@20:0.0000,NDCG@20:0.0000,HR@50:0.0000,NDCG@50:0.0000)
+INFO:root:Optimizer: Adam
+INFO:root:Namespace(model_name='BPRMF', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2025-12-04 17:21:16 ---------------------------------------------
+INFO:root:
+======================================
+ Arguments          | Values          
+======================================
+ batch_size         | 256            
+ data_appendix      |                
+ dataset            | MovieLens      
+ dropout            | 0              
+ early_stop         | 10             
+ emb_size           | 64             
+ epoch              | 200            
+ eval_batch_size    | 256            
+ gpu                | 0              
+ l2                 | 1e-06          
+ lr                 | 0.001          
+ main_metric        |                
+ num_neg            | 1              
+ num_workers        | 5              
+ optimizer          | Adam           
+ random_seed        | 0              
+ save_final_results | 1              
+ test_all           | 1              
+ topk               | [5, 10, 20, 50]
+======================================
+INFO:root:Device: cuda
+INFO:root:Load corpus from ../data/MovieLens\BaseReader.pkl
+INFO:root:#params: 586176
+INFO:root:BPRMF(
+  (u_embeddings): Embedding(6033, 64)
+  (i_embeddings): Embedding(3126, 64)
+)
+INFO:root:Test Before Training: (HR@5:0.0000,NDCG@5:0.0000,HR@10:0.0000,NDCG@10:0.0000,HR@20:0.0000,NDCG@20:0.0000,HR@50:0.0000,NDCG@50:0.0000)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.6931 [21.5 s]	val=(HR@5:0.0000,NDCG@5:0.0000) [15.0 s] *
+INFO:root:Epoch 2     loss=0.6931 [19.9 s]	val=(HR@5:0.0000,NDCG@5:0.0000) [15.2 s] *
+INFO:root:Epoch 3     loss=0.6931 [20.5 s]	val=(HR@5:0.0000,NDCG@5:0.0000) [15.0 s] *
+INFO:root:Epoch 4     loss=0.6931 [20.2 s]	val=(HR@5:0.0000,NDCG@5:0.0000) [15.1 s] *
+INFO:root:Epoch 5     loss=0.6931 [21.6 s]	val=(HR@5:0.0000,NDCG@5:0.0000) [16.0 s] *
+INFO:root:Epoch 6     loss=0.6931 [21.5 s]	val=(HR@5:0.0000,NDCG@5:0.0000) [17.1 s] *
+INFO:root:Epoch 7     loss=0.6931 [35.2 s]	val=(HR@5:0.0000,NDCG@5:0.0000) [35.8 s] *
+INFO:root:Namespace(model_name='BPRMF', model_mode='')
+INFO:root:--------------------------------------------- BEGIN: 2025-12-14 13:48:05 ---------------------------------------------
+INFO:root:
+======================================
+ Arguments          | Values          
+======================================
+ batch_size         | 256            
+ data_appendix      |                
+ dataset            | MovieLens      
+ dropout            | 0              
+ early_stop         | 10             
+ emb_size           | 64             
+ epoch              | 200            
+ eval_batch_size    | 256            
+ gpu                | 0              
+ l2                 | 1e-06          
+ lr                 | 0.001          
+ main_metric        |                
+ num_neg            | 1              
+ num_workers        | 5              
+ optimizer          | Adam           
+ random_seed        | 0              
+ save_final_results | 1              
+ test_all           | 1              
+ topk               | [5, 10, 20, 50]
+======================================
+INFO:root:Device: cpu
+INFO:root:Reading data from "../data/", dataset = "MovieLens" 
+INFO:root:Counting dataset statistics...
+INFO:root:"# user": 6032, "# item": 3125, "# entry": 574197
+INFO:root:Save corpus to ../data/MovieLens\BaseReader.pkl
+INFO:root:#params: 586176
+INFO:root:BPRMF(
+  (u_embeddings): Embedding(6033, 64)
+  (i_embeddings): Embedding(3126, 64)
+)
+INFO:root:Test Before Training: (HR@5:0.0007,NDCG@5:0.0004,HR@10:0.0031,NDCG@10:0.0012,HR@20:0.0094,NDCG@20:0.0028,HR@50:0.0209,NDCG@50:0.0051)
+INFO:root:Optimizer: Adam
+INFO:root:Epoch 1     loss=0.4185 [65.4 s]	val=(HR@5:0.0363,NDCG@5:0.0239) [32.8 s] *
+INFO:root:Epoch 2     loss=0.2924 [60.2 s]	val=(HR@5:0.0422,NDCG@5:0.0265) [32.7 s] *
+INFO:root:Epoch 3     loss=0.2584 [67.7 s]	val=(HR@5:0.0425,NDCG@5:0.0282) [32.3 s] *
+INFO:root:Epoch 4     loss=0.2349 [62.4 s]	val=(HR@5:0.0422,NDCG@5:0.0287) [33.4 s] *
+INFO:root:Epoch 5     loss=0.2174 [64.9 s]	val=(HR@5:0.0414,NDCG@5:0.0273) [33.3 s]
+INFO:root:Epoch 6     loss=0.2045 [64.3 s]	val=(HR@5:0.0461,NDCG@5:0.0312) [32.7 s] *
+INFO:root:Epoch 7     loss=0.1938 [30.6 s]	val=(HR@5:0.0453,NDCG@5:0.0305) [14.7 s]
+INFO:root:Epoch 8     loss=0.1855 [24.6 s]	val=(HR@5:0.0445,NDCG@5:0.0293) [14.4 s]
+INFO:root:Epoch 9     loss=0.1777 [24.6 s]	val=(HR@5:0.0468,NDCG@5:0.0318) [16.6 s] *
+INFO:root:Epoch 10    loss=0.1708 [25.4 s]	val=(HR@5:0.0468,NDCG@5:0.0323) [14.4 s] *
+INFO:root:Epoch 11    loss=0.1646 [24.9 s]	val=(HR@5:0.0496,NDCG@5:0.0321) [14.1 s]
+INFO:root:Epoch 12    loss=0.1594 [23.7 s]	val=(HR@5:0.0464,NDCG@5:0.0309) [14.1 s]
+INFO:root:Epoch 13    loss=0.1531 [27.7 s]	val=(HR@5:0.0468,NDCG@5:0.0316) [14.6 s]
+INFO:root:Epoch 14    loss=0.1478 [27.9 s]	val=(HR@5:0.0453,NDCG@5:0.0312) [14.3 s]
+INFO:root:Epoch 15    loss=0.1449 [27.8 s]	val=(HR@5:0.0488,NDCG@5:0.0342) [14.6 s] *
+INFO:root:Epoch 16    loss=0.1402 [28.5 s]	val=(HR@5:0.0453,NDCG@5:0.0311) [14.6 s]
+INFO:root:Epoch 17    loss=0.1352 [25.5 s]	val=(HR@5:0.0441,NDCG@5:0.0299) [14.1 s]
+INFO:root:Epoch 18    loss=0.1316 [27.4 s]	val=(HR@5:0.0449,NDCG@5:0.0306) [14.6 s]
+INFO:root:Epoch 19    loss=0.1284 [27.4 s]	val=(HR@5:0.0472,NDCG@5:0.0321) [15.1 s]
+INFO:root:Epoch 20    loss=0.1254 [25.5 s]	val=(HR@5:0.0500,NDCG@5:0.0326) [14.0 s]
+INFO:root:Epoch 21    loss=0.1212 [27.2 s]	val=(HR@5:0.0441,NDCG@5:0.0291) [14.5 s]
+INFO:root:Epoch 22    loss=0.1188 [27.0 s]	val=(HR@5:0.0457,NDCG@5:0.0314) [14.5 s]
+INFO:root:Epoch 23    loss=0.1169 [25.8 s]	val=(HR@5:0.0445,NDCG@5:0.0289) [14.2 s]
+INFO:root:Epoch 24    loss=0.1140 [26.9 s]	val=(HR@5:0.0422,NDCG@5:0.0290) [14.6 s]
+INFO:root:Early stop at 24 based on val result.
+INFO:root:
+Best Iter(val)=   15	 val=(HR@5:0.0488,NDCG@5:0.0342) [1322.5 s] 
+INFO:root:Load model from ../model/BPRMF/BPRMF__MovieLens__0__lr=0.001__l2=1e-06__emb_size=64__batch_size=256.pt
+INFO:root:
+Val  After Training: (HR@5:0.0488,NDCG@5:0.0342,HR@10:0.0722,NDCG@10:0.0417,HR@20:0.1136,NDCG@20:0.0522,HR@50:0.2217,NDCG@50:0.0736)
+INFO:root:
+Test After Training: (HR@5:0.0438,NDCG@5:0.0286,HR@10:0.0748,NDCG@10:0.0386,HR@20:0.1159,NDCG@20:0.0488,HR@50:0.2063,NDCG@50:0.0666)
+INFO:root:Saving top-100 recommendation results to: ../log/BPRMF\BPRMF__MovieLens__0__lr=0\rec-BPRMF-val.csv
+INFO:root:val Prediction results saved!
+INFO:root:Saving top-100 recommendation results to: ../log/BPRMF\BPRMF__MovieLens__0__lr=0\rec-BPRMF-test.csv
+INFO:root:test Prediction results saved!
+INFO:root:
+--------------------------------------------- END: 2025-12-14 14:11:34 ---------------------------------------------

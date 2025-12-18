@@ -1,0 +1,33 @@
+INFO:root:Namespace(model_name='BPR')
+INFO:root:--------------------------------------------- BEGIN: 2025-11-08 14:44:02 ---------------------------------------------
+INFO:root:
+========================================
+ Arguments       | Values               
+========================================
+ check_epoch     | 10                  
+ data_path       | data/               
+ dataset         |                     
+ dropout         | 0.2                 
+ early_stop      | 1                   
+ emb_size        | 64                  
+ eval_batch_size | 256                 
+ gpu             | 0                   
+ history_max     | 20                  
+ inverse_r       | True                
+ l2              | 1e-05               
+ load            | 0                   
+ log_file        | ../log/BPR____201...
+ lr              | 0.0001              
+ metric          | ["NDCG","HR"]       
+ model_path      | ../model/BPR/BPR_...
+ optimizer       | Adam                
+ path            | ../data/            
+ random_seed     | 2019                
+ regenerate      | 0                   
+ sep             | \t                  
+ topk            | [5,10]              
+ train           | 1                   
+ verbose         | 20                  
+========================================
+INFO:root:# cuda devices: 1
+INFO:root:Loading data from "../data/", dataset = "" 

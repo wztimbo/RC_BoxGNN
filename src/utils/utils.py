@@ -62,7 +62,7 @@ def format_metric(result_dict: Dict[str, Any]) -> str:
 		for metric in np.sort(metrics):
 			name = '{}@{}'.format(metric, topk)
 			m = result_dict[name] if topk != 'All' else result_dict[metric]
-			if type(m) is float or type(m) is np.float or type(m) is np.float32 or type(m) is np.float64:
+			if isinstance(m, (float, np.floating)):
 				format_str.append('{}:{:<.4f}'.format(name, m))
 			elif type(m) is int or type(m) is np.int or type(m) is np.int32 or type(m) is np.int64:
 				format_str.append('{}:{}'.format(name, m))
@@ -107,3 +107,87 @@ def non_increasing(lst: list) -> bool:
 def get_time():
 	return datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
+def precision_at_k(r, k):
+    """Score is precision @ k
+    Relevance is binary (nonzero is relevant).
+    Returns:
+        Precision @ k
+    Raises:
+        ValueError: len(r) must be >= k
+    """
+    assert k >= 1
+    r = np.asarray(r)[:k]
+    return np.mean(r)
+def early_stopping(log_value, best_value, stopping_step, expected_order='acc', flag_step=100):
+    # early stopping strategy:
+    assert expected_order in ['acc', 'dec']
+
+    if (expected_order == 'acc' and log_value >= best_value) or (expected_order == 'dec' and log_value <= best_value):
+        stopping_step = 0
+        best_value = log_value
+    else:
+        stopping_step += 1
+
+    if stopping_step >= flag_step:
+        print("Early stopping is trigger at step: {} log:{}".format(flag_step, log_value))
+        should_stop = True
+    else:
+        should_stop = False
+    return best_value, stopping_step, should_stop
+def dcg_at_k(r, k, method=1):
+    """Score is discounted cumulative gain (dcg)
+    Relevance is positive real values.  Can use binary
+    as the previous methods.
+    Returns:
+        Discounted cumulative gain
+    """
+    r = np.asfarray(r)[:k]
+    if r.size:
+        if method == 0:
+            return r[0] + np.sum(r[1:] / np.log2(np.arange(2, r.size + 1)))
+        elif method == 1:
+            return np.sum(r / np.log2(np.arange(2, r.size + 2)))
+        else:
+            raise ValueError('method must be 0 or 1.')
+    return 0.
+
+
+def ndcg_at_k(r, k, ground_truth, method=1):
+    """Score is normalized discounted cumulative gain (ndcg)
+    Relevance is positive real values.  Can use binary
+    as the previous methods.
+    Returns:
+        Normalized discounted cumulative gain
+
+        Low but correct defination
+    """
+    GT = set(ground_truth)
+    if len(GT) > k :
+        sent_list = [1.0] * k
+    else:
+        sent_list = [1.0]*len(GT) + [0.0]*(k-len(GT))
+    dcg_max = dcg_at_k(sent_list, k, method)
+    if not dcg_max:
+        return 0.
+    return dcg_at_k(r, k, method) / dcg_max
+
+
+def recall_at_k(r, k, all_pos_num):
+    r = np.asfarray(r)[:k]
+    return np.sum(r) / all_pos_num
+
+
+def hit_at_k(r, k):
+    r = np.array(r)[:k]
+    if np.sum(r) > 0:
+        return 1.
+    else:
+        return 0.
+	
+from sklearn.metrics import roc_auc_score
+def AUC(ground_truth, prediction):
+    try:
+        res = roc_auc_score(y_true=ground_truth, y_score=prediction)
+    except Exception:
+        res = 0.
+    return res
