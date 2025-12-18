@@ -35,8 +35,6 @@ six==1.17.0
 sympy==1.14.0
 threadpoolctl==3.6.0
 torch==2.1.0
-torch-scatter==2.1.2+pt21cpu
-torch-sparse==0.6.18+pt21cpu
 torchaudio==2.1.0
 torchvision==0.16.0
 tqdm==4.67.1
